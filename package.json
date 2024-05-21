@@ -9,7 +9,7 @@
     "test": "ng test",
     "git": "git add . && git commit -m 'update' && git push",
     "predeploy": "ng build --configuration production --base-href https://muhajirahmadh99.github.io/my-Portfolio/",
-    "deploy": "gh-pages -d dist/my-portfoliogh",
+    "deploy": "gh-pages -d dist/my-portfolio",
     "upload": "ng build --configuration production --base-href ./"
   },
   "private": true,
