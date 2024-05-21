@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "git": "git add . && git commit -m 'update' && git push",
-    "predeploy": "ng build --configuration production --base-href https://muhajirahmadh99.github.io/my_portfolio/",
-    "deploy": "gh-pages -d dist/my-Portfolio",
+    "predeploy": "ng build --configuration production --base-href https://muhajirahmadh99.github.io/my_Portfolio/",
+    "deploy": "gh-pages -d dist/my-portfolio",
     "upload": "ng build --configuration production --base-href ./"
   },
   "private": true,
