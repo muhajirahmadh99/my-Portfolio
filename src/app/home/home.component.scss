@@ -1,11 +1,12 @@
 .section-one {
-    background-image: url('/src/assets/images/b.png');
+    // background-image: url('assets/images/b.png');
+    background-image: url('../../assets/images/b.png');
     background-size: cover !important;
     background-repeat: no-repeat !important;
     // height: calc(116vh - 50px);
 }
 .section-two {
-    background-image: url('/src/assets/images/a.png');
+    background-image: url('../../assets/images/a.png');
     background-size: cover !important;
     background-repeat: no-repeat !important;
     height: 83vh;
@@ -13,18 +14,18 @@
 
 }
 .section-three{
-    background-image: url('/src/assets/images/c.png');
+    background-image: url('../../assets/images/c.png');
     background-size: cover !important;
     background-repeat: no-repeat !important;
 }
 .section-four{
-    background-image: url('/src/assets/images/d.png');
+    background-image: url('/assets/images/d.png');
     background-size: cover !important;
     background-repeat: no-repeat !important;
     height: 75vh
 }
 .section-five{
-    background-image: url('/src/assets/images/contat 1.png');
+    background-image: url('../../assets/images/contact 1.png');
     background-size: cover !important;
     background-repeat: no-repeat !important;
     height: 83vh;
