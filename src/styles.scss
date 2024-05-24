@@ -4,7 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+  font-family:'Courier New', Courier, monospace;
+  
+}
 body:not(.dark-mode-preloading) {
     transition: all 0.3s linear;
   }
