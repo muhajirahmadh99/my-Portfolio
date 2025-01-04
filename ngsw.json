@@ -1,0 +1,139 @@
+{
+  "configVersion": 1,
+  "timestamp": 1735984165691,
+  "index": "https://muhajirahmadh99.github.io/my-Portfolio/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://muhajirahmadh99.github.io/my-Portfolio/favicon.ico",
+        "https://muhajirahmadh99.github.io/my-Portfolio/index.html",
+        "https://muhajirahmadh99.github.io/my-Portfolio/main.9318c11da8b478ef.js",
+        "https://muhajirahmadh99.github.io/my-Portfolio/manifest.webmanifest",
+        "https://muhajirahmadh99.github.io/my-Portfolio/polyfills.4dcda093c5e8e2fb.js",
+        "https://muhajirahmadh99.github.io/my-Portfolio/runtime.19c8c775a3cf5c5d.js",
+        "https://muhajirahmadh99.github.io/my-Portfolio/styles.8256ffe5e5fbbb5a.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/MuhajirResume.docx",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-128x128.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-144x144.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-152x152.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-192x192.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-256x256.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-384x384.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-48x48.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-512x512.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-72x72.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-96x96.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/.picasa.ini",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/MySQL.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/a.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/b.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/boot.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/css.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/dp.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ec.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ecommerce.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/express.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/hasna_technology_logo.jpeg",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/html.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/js.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mat.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mongo.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ng.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/node.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/po.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/postman.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/react.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/tail.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ts.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/wd.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web-design.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/video/bg.mp4"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/MuhajirResume.docx": "420275c63f64258e14be0d4cb2b6ab9fb072275a",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-128x128.png": "ea35a7bc2c0ea91fc52786848f2f412d4125c231",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-144x144.png": "a071345f69357baaf63a1d2db05a371e3462055e",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-152x152.png": "f31f9a8cbe3b2805df90dcc21d10ceafce6abf0a",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-192x192.png": "57b2e0a6aaff7675c98c3128d86eae41e5d5659f",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-256x256.png": "e92650d66cb9354095c29700f4eca53ba2231a0c",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-384x384.png": "a9c0de8f22f90d59ac8edc2902f1e1195dd4bf0e",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-48x48.png": "ddc3ce30382c214761f829ca79670b3ec59478d8",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-512x512.png": "604b351ec6c739f7e268f8106ffc32a9a49e69eb",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-72x72.png": "5d008bdd1421a254b2a382040b52f46430f0f44c",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/icons/icon-96x96.png": "c11add3c6c5195f561c439b139fdf6b5e1f244e5",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/.picasa.ini": "1944419ea4b2c7c9325b35a04c7c71bf8352f00d",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/MySQL.png": "c63751862d6f7a723c9e56b97be85a38429fbb74",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/a.png": "983b4599c9327ccbe1d413601121c6a8a2d675de",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/b.png": "706ee31042c3975a8a891baf7a0c0ebe10ef9c3f",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/boot.png": "59f072c7a84791470c99c74a7e349d2caf5d7445",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/css.png": "4484d30ce38447353b8613320fbc762a0c6913ac",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/dp.png": "26dcaeddab2bf40c1aea17d3db525a2d5712f547",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ec.png": "a7312d4ae14f70e427c710478c29bb0a21bdaa8f",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ecommerce.png": "bcd46134faecc6f86d1f2a5f7d7f2badf460c77a",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/express.png": "51e4000ca6c21b53b91a3d0b7efe0efba48c7c30",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/hasna_technology_logo.jpeg": "44bbb75f5b05a5ab37b7c337c4024b3b158ecb99",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/html.png": "fbb51392944a7ebffc72c7457b0c8da20b3ea471",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/js.png": "b7914f3857488d46e5808d829034d384545c8e9e",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mat.png": "d29e683a33d3a5fe7e4ee10b0c168b6e34bacdc8",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mongo.png": "261670bfb1dacc6c7935b80d8e2549fa2919c2a1",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ng.png": "4f967f0e7c23823ec289acee044b145fa0234c6b",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/node.png": "8e115c425f706f2867f0939c0dc49bcd2be64fdb",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/po.png": "1defa68ca2f3800cf2cb3b4707b1d798c60835f2",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/postman.png": "9d4a80a1df23a1416cc69d45f72c3c7a4a96549b",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/react.png": "2060817c11bd94554c8e2554e98cd0612ce658e8",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/tail.png": "73c204442fa1c1f560dffd93a604e5875032f374",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ts.png": "21e942d34ad2f6203f04efb38da01968310f46e1",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/wd.png": "a6f1335da5ff5102c0a91ebedeaa7bac53a786c0",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web-design.png": "4822b8d911a9bd4413644174d767fbf0c54606a7",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web.png": "c09e731cea4adbfeeaf216401978d048f0f1bf0f",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/video/bg.mp4": "5181f70d8d2ffdbb1b6ff25f3c47610beb832b8f",
+    "https://muhajirahmadh99.github.io/my-Portfolio/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "https://muhajirahmadh99.github.io/my-Portfolio/index.html": "15728b7405f1574e4dac9951bcf99c86b72b5c0b",
+    "https://muhajirahmadh99.github.io/my-Portfolio/main.9318c11da8b478ef.js": "739c273d5b79e1745dd6498b5278dbfad071d05b",
+    "https://muhajirahmadh99.github.io/my-Portfolio/manifest.webmanifest": "6e139e3ca08eb1f59ab221d2365bb93d76a0a28a",
+    "https://muhajirahmadh99.github.io/my-Portfolio/polyfills.4dcda093c5e8e2fb.js": "c5d5fb810cc201ca430757dc0ccddfe76ba413d2",
+    "https://muhajirahmadh99.github.io/my-Portfolio/runtime.19c8c775a3cf5c5d.js": "90e58883b39a8e253811724580e73200a2dd6be8",
+    "https://muhajirahmadh99.github.io/my-Portfolio/styles.8256ffe5e5fbbb5a.css": "d6f332307b2a099f6eef4dc5deca1504f718fadc"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
