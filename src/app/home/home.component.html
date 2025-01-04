@@ -6,7 +6,7 @@
       <div class="w-fit">
         <div class="text-lg font-bold text-gray-50">HI I AM</div>
         <div class="text-xl font-bold text-red-500">MUHAJIR AHMADH</div>
-        <div class="mt-3 text-6xl font-bold text-gray-50">
+        <div class="mt-3 text-5xl font-bold text-gray-50">
           Front End <br />
           <span class="text-red-500">DEVELOPER</span>
         </div>
@@ -24,10 +24,10 @@
         </button>
       </div>
       <div class="">
-        <div class="">
+        <div class="shad">
           <img
             src="assets/images/dp.png"
-            class="m-auto border-2 border-gray-900 max-sm:mt-2 rounded-3xl shadow-lg w-96"
+            class="m-auto border-2 border-gray-900 max-sm:mt-2 rounded-3xl shadow-lg w-96 max-sm:w-80 max-sm:mx-4"
             alt=""
           />
         </div>
@@ -86,8 +86,8 @@
             </div>
           </div>
           <div class="items-center block p-8 shadow-xl w-80 h-44 bg-gray-50">
-            <div class="text-3xl">Current</div>
-            <div class="text-xl">YEAR OF EXPERIENCE</div>
+            <div class="text-xl">Current</div>
+            <div class="text-lg">YEAR OF EXPERIENCE</div>
             <button
               type="button"
               class="text-white mt-4 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
@@ -103,25 +103,25 @@
   </div>
 </div>
 <div
-  class="section-two bg-slate-800 h-[70vh] flex items-center max-sm:h-full max-sm:p-6 mt-1"
+  class="section-two bg-slate-800 h-[70vh] flex items-center justify-center max-sm:h-full max-sm:p-6 mt-1"
   id="sec2"
 >
   <div class="section container">
     <div class="flex items-center justify-start mx-auto">
       <div class="">
         <div class="text-3xl font-bold text-red-500 border-b-4 w-fit mb-4">
-          About Myself
+          What i do
         </div>
         <div class="flex gap-2 mt-3 max-sm:flex-wrap justify-center">
-          <div class="card w-80 shadow-md">
+          <div class="w-80 shadow-md p-2 bg-slate-700 text-gray-100 max-sm:p-3">
             <img
               src="https://cdn3.iconfinder.com/data/icons/illustricon-tech/512/browser.development-512.png"
               class="mt-2 w-48 mx-auto"
               alt="..."
             />
-            <div class="card-body">
-              <h5 class="card-title text-lg font-bold">Front End Developer</h5>
-              <p class="card-text">
+            <div class="">
+              <h5 class="text-lg font-bold mt-2">Front End Developer</h5>
+              <p class="leading-5 mt-2">
                 I'm a front-end developer with 1 year and 7 months of experience
                 at Hasna Technology, where I've specialized in Angular
                 development and responsive design. I completed my MCA with an
@@ -130,15 +130,15 @@
             </div>
           </div>
 
-          <div class="card w-80 shadow-md bg-slate-700 text-gray-100">
+          <div class="w-80 shadow-md bg-slate-700 text-gray-100 p-2 max-sm:p-3">
             <img
               src="https://cdn-icons-png.freepik.com/512/8686/8686102.png?ga=GA1.1.374787919.1730640900"
               class="mt-2 w-48 mx-auto"
               alt="..."
             />
-            <div class="card-body">
-              <h5 class="card-title text-xl font-bold">Back End Developer</h5>
-              <p class="card-text">
+            <div class="">
+              <h5 class="text-xl font-bold mt-2">Back End Developer</h5>
+              <p class="leading-5 mt-2">
                 I'm a back-end developer with 2 years and 8 months of experience
                 at Hasna Technology, where I've specialized in Node.js
                 development and MongoDB. I 've contributed to significant
@@ -153,22 +153,22 @@
 </div>
 
 <div
-  class="section-four bg-slate-800 flex items-center h-[70vh] max-sm:h-full max-sm:p-6 mt-1"
+  class="section-four bg-slate-800 flex items-center justify-center h-[70vh] max-sm:h-full max-sm:p-6 mt-1"
 >
   <div class="section container" id="sec4">
     <h3 class="text-3xl font-bold text-red-500 border-b-4 w-fit mb-8">
       Portfilio
     </h3>
 
-    <div class="flex gap-2 mt-3 max-sm:flex-wrap">
+    <div class="flex gap-3 mt-3 max-sm:flex-wrap">
       <div
-        class="card w-96 shadow-md bg-slate-700 text-gray-100 h-96"
+        class="w-96 shadow-md bg-slate-700 text-gray-100 rounded-md"
         *ngFor="let item of portfolio"
       >
-        <img [src]="item.img" class="card-img-top h-44" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title text-lg font-bold">{{ item.title }}</h5>
-          <p class="card-text">
+        <img [src]="item.img" class="h-44" alt="..." />
+        <div class="p-3">
+          <h5 class="text-lg font-bold">{{ item.title }}</h5>
+          <p class="">
             {{ item.description }}
           </p>
           <a [href]="item.url" target="_blank">
@@ -185,57 +185,48 @@
   </div>
 </div>
 <div
-  class="section-four bg-slate-800 flex items-center h-[72vh] max-sm:h-full max-sm:p-6 mt-1"
+  class="section-four bg-slate-800 flex items-center justify-center h-[72vh] max-sm:h-full max-sm:p-6 mt-1"
 >
   <div class="section container" id="sec4">
     <h3 class="text-3xl font-bold text-red-500 border-b-4 w-fit mb-8">
       My Skills
     </h3>
 
-    <div class="flex gap-2 mt-3 max-sm:flex-wrap flex-wrap max-sm:justify-center">
-      <!-- <div
-        class="card skill p-2 shadow-md bg-slate-700 text-gray-100"
+    <div
+      class="flex gap-2 mt-3 max-sm:flex-wrap flex-wrap max-sm:justify-center"
+    >
+      <div
+        class="w-44 rounded-lg h-48 p-2 shadow-md bg-slate-700"
         *ngFor="let item of skills"
       >
-        <img [src]="item.img" class="w-48" alt="..." />
-        <div class="card-body">
-          <p class="card-text">
-            {{ item.course }}
-          </p>
-        </div>
-      </div> -->
-      <div class=" w-44 rounded-lg h-48 p-2 shadow-md bg-slate-700"  *ngFor="let item of skills">
-        <img
-          [src]="item.img"
-          class="mt-2 w-fit h-28 mx-auto"
-          alt="..."
-        />
+        <img [src]="item.img" class="mt-2 w-fit h-28 mx-auto" alt="..." />
         <div class="">
-          <h5 class=" text-lg font-bold text-center text-gray-100 mt-3">{{ item.course }}</h5>
-
+          <h5 class="text-lg font-bold text-center text-gray-100 mt-3">
+            {{ item.course }}
+          </h5>
         </div>
       </div>
     </div>
   </div>
 </div>
 <div
-  class="section-five bg-slate-800 mt-1 flex items-center h-[70vh]"
+  class="section-five bg-slate-800 mt-1 flex items-center justify-center h-[80vh] p-3"
   id="sec5"
 >
   <div class="section container">
     <div class="">
       <h2
-        class="mb-4 text-3xl text-red-500 border-b-4 font-extrabold tracking-tight w-fit dark:text-gray-900"
+        class="mb-4 text-3xl text-red-500 border-b-4 font-bold tracking-tight w-fit dark:text-gray-900"
       >
         Contact Me
       </h2>
       <p
-        class="mb-8 font-light text-center text-gray-200 lg:mb-16 dark:text-gray-400 sm:text-xl"
+        class="mb-8 font-light text-center max-sm:text-start text-gray-200 lg:mb-16 dark:text-gray-400 sm:text-xl"
       >
         Got a technical issue? Want to send feedback about a beta feature? Need
         details about our Business plan? Let me know.
       </p>
-      <form class="space-y-8 w-2/4 mx-auto">
+      <form class="space-y-8 w-2/4 mx-auto max-sm:w-full">
         <div>
           <label
             for="email"
@@ -287,233 +278,3 @@
     </div>
   </div>
 </div>
-<!-- <div class="section-two" id="sec2">
-  <div class="section">
-    <div class="container flex items-center justify-center mx-auto">
-      <div
-        class="p-8 bg-gray-900 opacity-80 shadow-lg w-fit mt-[200px] h-fit"
-      >
-        <div class="text-3xl font-bold text-red-500">ABOUT MYSELF</div>
-        <p class="mt-3 text-lg font-bold text-gray-50">
-          I'm a front-end developer with 1 year and 7 months of experience at
-          Hasna Technology, where I've specialized in Angular development and
-          responsive design. I completed my MCA with an 85.3% score from Jamal
-          Mohamed College, alongside a B.Sc in Computer Science. At Hasna
-          Technology, I developed user interfaces for mobile, tablet, and
-          desktop platforms, working with HTML, CSS, JavaScript, and SCSS. I've
-          contributed to significant projects, such as one for Cargill, where I
-          handled client requirements and supported bug fixing. I know well
-          react also.
-        </p>
-        <div class="flex flex-wrap gap-4 mt-4">
-          <div class="p-8 shadow-xl h-44 w-80 bg-gray-50">
-            <div class="flex gap-3">
-              <div class=""><i class="bi bi-person-circle"></i></div>
-              <div class="text-base font-bold">MUHAJIR AHMADH</div>
-            </div>
-            <div class="flex gap-3 mt-3">
-              <div class=""><i class="bi bi-envelope-fill"></i></div>
-              <div class="text-base font-bold">muhajirahamed&#64;gmail.com</div>
-            </div>
-            <div class="flex gap-3 mt-3">
-              <div class=""><i class="bi bi-telephone-fill"></i></div>
-              <div class="text-base font-bold">+91-9626260457</div>
-            </div>
-          </div>
-          <div class="items-center block p-8 shadow-xl w-80 h-44 bg-gray-50">
-            <div class="text-3xl">1+</div>
-            <div class="text-xl">YEARS OF EXPERIENCE</div>
-            <button
-              type="button"
-              class="text-white mt-4 bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-              (click)="downloadResume()"
-              title="download resume"
-            >
-              Download Resume
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="section-three">
-  <div class="section">
-    <div class="container mx-auto">
-      <div class="text-3xl mx-2 font-bold text-red-500 uppercase">
-       Work Experience
-      </div>
-      <div class="flex gap-3 max-sm:flex-wrap max-sm:">
-        <div class="bg-gray-900 opacity-80 shadow-lg w-full max-sm:w-full">
-          <div class="">
-            <div class="">
-              <div
-                class="h-full p-3 bg-transparent rounded-xl dark:bg-gray-800 dark:border-gray-700"
-              >
-                <div class="">
-                  <img
-                    src="assets/images/hasna_technology_logo.jpeg"
-                    class="rounded-lg w-36"
-                    alt=""
-                  />
-                </div>
-                <h5 class="mt-3 text-xl font-bold text-red-500">
-                  Hasna Technology | Junior Web Developer
-                </h5>
-                <p class="font-bold text-gray-100 dark:text-gray-400">
-                  As a Front End Developer with a current focus on Angular, I
-                  have extensive experience with its various features and
-                  functionalities. In my recent position at Hasna Technology,
-                  I've had the opportunity to work on a significant project for
-                  Cargill, where I was responsible for developing web content
-                  for various sections. My experience with Angular 13 has
-                  allowed me to efficiently create modular and reusable
-                  components, improving the maintainability of the codebase. I
-                  utilized Angular's two-way data binding and dependency
-                  injection which enabled me to seamlessly manage data flow and
-                  improve the responsiveness of the web applications I was
-                  developing.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="bg-gray-900 opacity-80 shadow-lg w-full max-sm:w-full">
-          <div class="">
-            <div class="">
-              <div
-                class="h-full p-3 bg-transparent rounded-xl dark:bg-gray-800 dark:border-gray-700"
-              >
-                <div class="">
-                  <img
-                    src="assets/images/hasna_technology_logo.jpeg"
-                    class="rounded-lg w-36"
-                    alt=""
-                  />
-                </div>
-                <h5 class="mt-3 text-xl font-bold text-red-500">
-                  Hasna Technology | Junior Web Developer
-                </h5>
-                <p class="font-bold text-gray-100 dark:text-gray-400">
-                  As a Front End Developer with a current focus on Angular, I
-                  have extensive experience with its various features and
-                  functionalities. In my recent position at Hasna Technology,
-                  I've had the opportunity to work on a significant project for
-                  Cargill, where I was responsible for developing web content
-                  for various sections. My experience with Angular 13 has
-                  allowed me to efficiently create modular and reusable
-                  components, improving the maintainability of the codebase. I
-                  utilized Angular's two-way data binding and dependency
-                  injection which enabled me to seamlessly manage data flow and
-                  improve the responsiveness of the web applications I was
-                  developing.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="relative section-four">
-  <div class="container mx-auto section">
-    <div class="flex justify-center">
-      <div
-        class="absolute w-3/4 p-6 shadow-lg top-32 max-sm:w-fit max-sm:top-24"
-      >
-        <div class="text-3xl font-bold text-red-500">Professional</div>
-        <div class="mt-2 text-2xl font-bold text-lime-400">
-          My Knowledge Level in Software
-        </div>
-        <div class="mt-3" *ngFor="let item of progress">
-          <div class="flex justify-between mb-1">
-            <span class="text-base font-medium text-red-500 dark:text-white">{{
-              item.course
-            }}</span>
-            <span class="text-sm font-medium text-red-500 dark:text-white">{{
-              item.per
-            }}</span>
-          </div>
-          <div
-            class="w-full bg-gray-600 rounded-full h-2.5 mb-4 dark:bg-gray-700"
-          >
-            <div
-              class="bg-teal-100 h-2.5 rounded-full dark:bg-gray-300"
-              [style.width]="item.per"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="bg-black section-five" id="sec5">
-  <section class="">
-    <div class="max-w-screen-md px-4 py-3 mx-auto">
-      <h2
-        class="mb-4 text-4xl font-extrabold tracking-tight text-center text-red-500 dark:text-gray-900"
-      >
-        Contact Me
-      </h2>
-      <p
-        class="mb-8 font-light text-center text-gray-200 lg:mb-16 dark:text-gray-400 sm:text-xl"
-      >
-        Got a technical issue? Want to send feedback about a beta feature? Need
-        details about our Business plan? Let me know.
-      </p>
-      <form class="space-y-8">
-        <div>
-          <label
-            for="email"
-            class="block mb-2 text-sm font-medium text-gray-300 dark:text-gray-900"
-            >Your email</label
-          >
-          <input
-            type="email"
-            id="email"
-            class="shadow-sm bg-gray-300 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="name@example.com"
-            required
-          />
-        </div>
-        <div>
-          <label
-            for="subject"
-            class="block mb-2 text-sm font-medium text-gray-300 dark:text-gray-900"
-            >Subject</label
-          >
-          <input
-            type="text"
-            id="subject"
-            class="block w-full p-3 text-sm text-gray-900 bg-gray-300 border border-gray-300 rounded-lg shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-            placeholder="Let us know how we can help you"
-            required
-          />
-        </div>
-        <div class="sm:col-span-2">
-          <label
-            for="message"
-            class="block mb-2 text-sm font-medium text-gray-300 dark:text-gray-900"
-            >Your message</label
-          >
-          <textarea
-            id="message"
-            rows="6"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-300 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
-            placeholder="Leave a comment..."
-          ></textarea>
-        </div>
-        <button
-          type="button"
-          class="px-5 py-3 text-sm font-medium text-center text-white rounded-lg bg-cyan-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-        >
-          Send message
-        </button>
-      </form>
-    </div>
-  </section>
-</div> -->
