@@ -4,7 +4,7 @@
 
 body{
   font-family:'Courier New', Courier, monospace;
-  background-color: #151616;
+  background-color:  rgb(30 41 59 );
 
 }
 body:not(.dark-mode-preloading) {
@@ -20,6 +20,3 @@ body:not(.dark-mode-preloading) {
     background-color: #dfe6e9;
     color: #2d3436;
   }
-a{
-  text-decoration: none !important;
-}
