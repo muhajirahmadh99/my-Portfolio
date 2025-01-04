@@ -1,23 +1,28 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
+@import "bootstrap/scss/bootstrap.scss";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
   font-family:'Courier New', Courier, monospace;
-  
+  background-color: #151616;
+
 }
 body:not(.dark-mode-preloading) {
     transition: all 0.3s linear;
   }
-  
+
   body.dark-mode {
     background-color: #2d3436;
     color: #dfe6e9;
   }
-  
+
   body.light-mode {
     background-color: #dfe6e9;
     color: #2d3436;
   }
+a{
+  text-decoration: none !important;
+}

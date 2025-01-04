@@ -1,25 +1,31 @@
 // scroll to top
 .arrow {
-	display: flex;
-	justify-content: flex-end;
-	cursor: pointer;
-	position: fixed;
-	right: 10px;
-	bottom: 10px;
-	transform: translatey(0px);
-	animation: float 2s cubic-bezier(0.39, -0.08, 0.58, 1) infinite;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  transform: translatey(0px);
+  animation: float 2s cubic-bezier(0.39, -0.08, 0.58, 1) infinite;
 
-	@keyframes float {
-		0% {
-			transform: translatey(0px);
-		}
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
 
-		50% {
-			transform: translatey(-20px);
-		}
+    50% {
+      transform: translatey(-20px);
+    }
 
-		100% {
-			transform: translatey(0px);
-		}
-	}
+    100% {
+      transform: translatey(0px);
+    }
+  }
+}
+a {
+  color: rgb(243 244 246);
+}
+a:hover {
+  color: rgb(239 68 68);
 }
