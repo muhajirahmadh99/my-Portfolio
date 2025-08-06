@@ -90,7 +90,7 @@ export class HomeComponent {
     },
     {
       img: 'assets/images/MySQL.png',
-      course: 'MongoDB',
+      course: 'MySQL',
     },
   ];
 
@@ -108,6 +108,13 @@ export class HomeComponent {
       description:
         'A fully functional e-commerce website built using Laravel and Vue.',
       url: 'https://muhajirahmadh99.github.io/Ibn_Anwaar/#/home',
+    },
+    {
+      img: 'assets/images/mat.png',
+      title: 'Matrimony Website',
+      description:
+        'A responsive matrimony website built using Angular and Firebase.',
+      url: 'https://muhajirahmadh99.github.io/saptjanm-matrimony/',
     },
     {
       img: 'assets/images/mat.png',
