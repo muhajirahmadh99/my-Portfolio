@@ -2,7 +2,7 @@
   "name": "my-Portfolio",
   "short_name": "my-Portfolio",
   "theme_color": "#1e293b",
-  "background_color": "#fafafa",
+  "background_color": "#1e293b",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
