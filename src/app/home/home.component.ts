@@ -25,10 +25,10 @@ export class HomeComponent {
   }
 
   downloadResume() {
-    const resumeUrl = 'assets/MuhajirResume.docx'; // Path to your resume file
+    const resumeUrl = 'assets/Muhajir_Ahamed_Resume.pdf'; // Path to your resume file
     const link = document.createElement('a');
     link.href = resumeUrl;
-    link.download = 'MuhajirResume.docx'; // Name of the downloaded file
+    link.download = 'Muhajir_Ahamed_Resume.pdf'; // Name of the downloaded file
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
