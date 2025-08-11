@@ -19,6 +19,6 @@ export class MainserviceService {
     document.querySelector("#sec3")?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
   gotobottom4() {
-    document.querySelector("#sec4")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    document.querySelector("#sec4")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }

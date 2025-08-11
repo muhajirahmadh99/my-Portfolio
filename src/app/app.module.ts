@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { EducationComponent } from './education/education.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { SkillsBgComponent } from './animation/skills-bg/skills-bg.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    EducationComponent
+    EducationComponent,
+    SkillsBgComponent
   ],
   imports: [
     BrowserModule,

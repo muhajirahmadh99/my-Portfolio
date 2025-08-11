@@ -1,0 +1,11 @@
+@keyframes bounce-card {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.bounce {
+  animation: bounce-card 1s ease-in-out infinite;
+}
+.bounce-delay-1 { animation-delay: 0.1s; }
+.bounce-delay-2 { animation-delay: 0.1s; }
+.bounce-delay-3 { animation-delay: 0.1s; }
