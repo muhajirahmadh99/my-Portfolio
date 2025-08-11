@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754569126701,
+  "timestamp": 1754916261515,
   "index": "https://muhajirahmadh99.github.io/my-Portfolio/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,12 @@
       "urls": [
         "https://muhajirahmadh99.github.io/my-Portfolio/favicon.ico",
         "https://muhajirahmadh99.github.io/my-Portfolio/index.html",
-        "https://muhajirahmadh99.github.io/my-Portfolio/main.c0884313e479e6f9.js",
+        "https://muhajirahmadh99.github.io/my-Portfolio/main.d52573ececeb3b45.js",
         "https://muhajirahmadh99.github.io/my-Portfolio/manifest.webmanifest",
         "https://muhajirahmadh99.github.io/my-Portfolio/polyfills.4dcda093c5e8e2fb.js",
-        "https://muhajirahmadh99.github.io/my-Portfolio/runtime.19c8c775a3cf5c5d.js",
-        "https://muhajirahmadh99.github.io/my-Portfolio/styles.8d7d230e289af3d6.css"
+        "https://muhajirahmadh99.github.io/my-Portfolio/runtime.186a42f58eea60c2.js",
+        "https://muhajirahmadh99.github.io/my-Portfolio/scripts.68ed26d13e2edc19.js",
+        "https://muhajirahmadh99.github.io/my-Portfolio/styles.f6e5cd93f4dfd038.css"
       ],
       "patterns": []
     },
@@ -47,6 +48,7 @@
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/a.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/b.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/boot.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/call.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/css.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/dp.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/dp1.png",
@@ -59,6 +61,8 @@
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/js.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mat.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mongo.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mui.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mx.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ng.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/node.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/po.png",
@@ -66,6 +70,7 @@
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/react.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/tail.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ts.png",
+        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/vs.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/wd.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web-design.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web.png",
@@ -94,6 +99,7 @@
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/a.png": "983b4599c9327ccbe1d413601121c6a8a2d675de",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/b.png": "706ee31042c3975a8a891baf7a0c0ebe10ef9c3f",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/boot.png": "59f072c7a84791470c99c74a7e349d2caf5d7445",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/call.png": "6193008fbbb0468e599f6a611d35d6c9eaf0e9e8",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/css.png": "4484d30ce38447353b8613320fbc762a0c6913ac",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/dp.png": "26dcaeddab2bf40c1aea17d3db525a2d5712f547",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/dp1.png": "0379d996b59a560a3486157c3eba7e73e4b04c83",
@@ -106,6 +112,8 @@
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/js.png": "b7914f3857488d46e5808d829034d384545c8e9e",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mat.png": "d29e683a33d3a5fe7e4ee10b0c168b6e34bacdc8",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mongo.png": "261670bfb1dacc6c7935b80d8e2549fa2919c2a1",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mui.png": "b4d9093c85fcc483ae1d8667b5bdf854f9af81d8",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/mx.png": "cb589e2ca868227149330adef53a620fc791b202",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ng.png": "4f967f0e7c23823ec289acee044b145fa0234c6b",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/node.png": "8e115c425f706f2867f0939c0dc49bcd2be64fdb",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/po.png": "1defa68ca2f3800cf2cb3b4707b1d798c60835f2",
@@ -113,17 +121,19 @@
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/react.png": "2060817c11bd94554c8e2554e98cd0612ce658e8",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/tail.png": "73c204442fa1c1f560dffd93a604e5875032f374",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/ts.png": "21e942d34ad2f6203f04efb38da01968310f46e1",
+    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/vs.png": "f1ba9ae0e7125021ba04e3eedf98373348e06972",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/wd.png": "a6f1335da5ff5102c0a91ebedeaa7bac53a786c0",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web-design.png": "4822b8d911a9bd4413644174d767fbf0c54606a7",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web.png": "c09e731cea4adbfeeaf216401978d048f0f1bf0f",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/video/bg.mp4": "5181f70d8d2ffdbb1b6ff25f3c47610beb832b8f",
     "https://muhajirahmadh99.github.io/my-Portfolio/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://muhajirahmadh99.github.io/my-Portfolio/index.html": "c71836906dc737665e1b96a9f4eef99da7606720",
-    "https://muhajirahmadh99.github.io/my-Portfolio/main.c0884313e479e6f9.js": "1c923b0eacae5e4f434f8c98b1b6d299ad21fea3",
-    "https://muhajirahmadh99.github.io/my-Portfolio/manifest.webmanifest": "8a62e9f7aeb64f07cec0b73b9b3bc422291ce7e1",
+    "https://muhajirahmadh99.github.io/my-Portfolio/index.html": "40950869a690cd36ca34c06df4ad177f612c72e1",
+    "https://muhajirahmadh99.github.io/my-Portfolio/main.d52573ececeb3b45.js": "7cd2fc894bb4d5c596751073050ba320fb39869c",
+    "https://muhajirahmadh99.github.io/my-Portfolio/manifest.webmanifest": "78111747795c583e1a87c688be411bada4411f32",
     "https://muhajirahmadh99.github.io/my-Portfolio/polyfills.4dcda093c5e8e2fb.js": "c5d5fb810cc201ca430757dc0ccddfe76ba413d2",
-    "https://muhajirahmadh99.github.io/my-Portfolio/runtime.19c8c775a3cf5c5d.js": "90e58883b39a8e253811724580e73200a2dd6be8",
-    "https://muhajirahmadh99.github.io/my-Portfolio/styles.8d7d230e289af3d6.css": "7f4d8e6207ba35ad1b5d270bb873a5da2032b369"
+    "https://muhajirahmadh99.github.io/my-Portfolio/runtime.186a42f58eea60c2.js": "e588e22dd91732f160ab71802059443e1081ff1b",
+    "https://muhajirahmadh99.github.io/my-Portfolio/scripts.68ed26d13e2edc19.js": "cffb6dcf1e317b2859024c20248dd0c50ce6b885",
+    "https://muhajirahmadh99.github.io/my-Portfolio/styles.f6e5cd93f4dfd038.css": "e81311f0bdb04a034721b1d642be7636e28f0d7b"
   },
   "navigationUrls": [
     {
