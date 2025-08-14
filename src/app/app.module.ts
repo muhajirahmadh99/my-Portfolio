@@ -9,6 +9,11 @@ import { HomeComponent } from './home/home.component';
 import { EducationComponent } from './education/education.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { SkillsBgComponent } from './animation/skills-bg/skills-bg.component';
+import { AboutComponent } from './about/about.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ContactComponent } from './contact/contact.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { SkillsBgComponent } from './animation/skills-bg/skills-bg.component';
     FooterComponent,
     HomeComponent,
     EducationComponent,
-    SkillsBgComponent
+    SkillsBgComponent,
+    AboutComponent,
+    ProjectsComponent,
+    SkillsComponent,
+    ContactComponent,
+    HeroComponent,
   ],
   imports: [
     BrowserModule,

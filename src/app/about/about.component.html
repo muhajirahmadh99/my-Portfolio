@@ -1,0 +1,96 @@
+  <div class="section">
+    <!-- Heading -->
+    <div class="text-center">
+      <div
+        class="inline-block text-3xl font-bold text-gray-900 border-b-4 border-[#1e293b] pb-1 max-sm:mx-1 mx-[160px]"
+      >
+        About Myself
+      </div>
+    </div>
+
+    <div class="relative w-full max-w-4xl mx-auto mt-4">
+      <!-- Vertical Line -->
+      <div
+        class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-[#1e293b] max-sm:hidden"
+      ></div>
+
+      <!-- Loop Projects -->
+      <div
+        *ngFor="let item of projects; let i = index"
+        class="flex flex-col sm:flex-row w-full mb-8"
+        [ngClass]="{
+          'justify-end': i % 2 === 0,
+          'justify-start': i % 2 !== 0
+        }"
+        [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+      >
+        <!-- Empty space for right-side cards -->
+        <div *ngIf="i % 2 === 0" class="hidden sm:block sm:w-1/2"></div>
+
+        <!-- Card -->
+        <div
+          class="sm:w-1/2"
+          [ngClass]="{ 'sm:pl-8': i % 2 === 0, 'sm:pr-8': i % 2 !== 0 }"
+        >
+          <div
+            class="card p-3 rounded-md bg-white cursor-pointer shadow-[0_35px_45px_rgba(0,0,0,0.2)] hover:shadow-xl hover:scale-105 transition-transform duration-300"
+          >
+            <div class="flex items-center gap-3">
+              <img
+                [src]="item.img"
+                alt="Logo"
+                class="w-10 h-10 object-contain"
+              />
+              <div>
+                <h4 class="font-semibold text-gray-700">{{ item.office }}</h4>
+                <span class="text-xs text-gray-500">{{ item.exp }}</span>
+              </div>
+            </div>
+            <p class="text-sm font-bold text-gray-600 mt-2">{{ item.role }}</p>
+            <ul
+              class="list-inside text-gray-600 text-sm mt-2 space-y-1 list-none"
+            >
+              <li [innerHTML]="item.description"></li>
+            </ul>
+            <div class="flex gap-2 mt-2 max-sm:flex-wrap max-sm:mt-3">
+              <div
+                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+              >
+                <div class="">
+                  <img [src]="item.roleimg1" class="max-sm:max-w-[20px] max-w-6" alt="" />
+                </div>
+                <div class="text-sm">{{ item.roleTitle1 }}</div>
+              </div>
+              <div
+                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+              >
+                <div class="">
+                  <img [src]="item.roleimg2" class="max-sm:max-w-[20px] max-w-6" alt="" />
+                </div>
+                <div class="text-sm">{{ item.roleTitle2 }}</div>
+              </div>
+              <div
+                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+              >
+                <div class="">
+                  <img [src]="item.roleimg3" class="max-sm:max-w-[20px] max-w-6" alt="" />
+                </div>
+                <div class="text-sm">{{ item.roleTitle3 }}</div>
+              </div>
+              <div
+                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+              >
+                <div class="">
+                  <img  [src]="item.roleimg4" class="max-sm:max-w-[20px] max-w-6" alt="" />
+                </div>
+                <div class="text-sm">{{ item.roleTitle4 }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Empty space for left-side cards -->
+        <div *ngIf="i % 2 !== 0" class="hidden sm:block sm:w-1/2"></div>
+      </div>
+    </div>
+  </div>

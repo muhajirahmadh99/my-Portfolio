@@ -1,0 +1,21 @@
+  <div class="section md:mx-[150px] text-center">
+    <h2
+      class="inline-block text-3xl font-bold text-gray-900 border-b-4 border-[#334155] pb-1 mb-4 max-sm:mx-10"
+    >
+      My Skills
+    </h2>
+
+    <div class="flex gap-2 flex-wrap justify-center">
+      <div
+        #skillCard
+        class="w-44 rounded-lg h-48 p-2 shadow-[0_35px_45px_rgba(0,0,0,0.2)] bg-white sm:w-[200px] hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+        *ngFor="let item of skills; let i = index"
+        [ngClass]="'bounce-delay-' + (i % 3)"
+      >
+        <img [src]="item.img" class="mt-2 w-fit h-28 mx-auto" alt="..." />
+        <h5 class="text-lg font-bold text-center text-gray-700 mt-3">
+          {{ item.course }}
+        </h5>
+      </div>
+    </div>
+  </div>

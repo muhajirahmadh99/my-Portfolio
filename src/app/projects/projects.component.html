@@ -1,0 +1,36 @@
+  <div class="section">
+    <div class="flex justify-center text-center">
+      <div class="">
+        <div
+          class="inline-block text-3xl font-bold text-gray-900 border-b-4 border-[#1e293b] pb-1"
+        >
+          Featured Projects
+        </div>
+
+        <div
+          class="flex gap-8 mt-3 max-sm:flex-wrap sm:justify-center md:flex-wrap"
+        >
+          <div
+            class="w-96 text-gray-900 rounded-lg shadow-[0_35px_45px_rgba(0,0,0,0.2)] bg-gray-100 hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+            *ngFor="let item of portfolio"
+          >
+            <img [src]="item.img" class="h-44" alt="..." />
+            <div class="p-3">
+              <h5 class="text-lg font-bold">{{ item.title }}</h5>
+              <p class="">
+                {{ item.description }}
+              </p>
+              <a [href]="item.url" target="_blank">
+                <button
+                  class="text-white mt-3 bg-[#1e293b] hover:bg-[#334155] focus:ring-4 focus:outline-none focus:ring-gray-400 shadow-lg font-medium rounded text-sm px-5 py-2.5 text-center me-2 mb-2 transition duration-300"
+                >
+                  <span class="text-gray-200">VIEW</span>
+                  <span class="mx-1 text-white">PROJECT</span>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

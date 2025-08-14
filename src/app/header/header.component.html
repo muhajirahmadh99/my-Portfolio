@@ -1,6 +1,8 @@
 <nav
-  class="sticky top-0 z-10 w-[100vw] shadow-xl cursor-pointer bg-slate-800 dark:bg-gray-900 start-0 dark:border-gray-600 p-10 max-sm:p-4"
+  class="sticky top-2 z-10 shadow-xl cursor-pointer bg-[#186ec4] bg-[linear-gradient(90deg,rgba(24,110,196,1)_0%,rgba(30,41,59,1)_50%)] dark:bg-gray-900 start-0 dark:border-gray-600 p-10 max-sm:p-4 w-[90%] max-sm:w-full max-sm:rounded-none max-sm:top-0 flex m-auto rounded-full"
 >
+
+
   <div
     class="container flex flex-wrap items-center justify-between md:mx-[150px]"
   >
@@ -19,10 +21,20 @@
             (click)="toggleDarkMode()"
             class="sr-only peer"
           /> -->
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white cursor-pointer">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-          </svg>
-
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 text-white cursor-pointer"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+          />
+        </svg>
 
         <!-- <div
             class="relative dark:invert w-11 h-6 bg-gray-200 peer-focus:outline-none dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-800 peer-checked:bg-gray-500"
@@ -76,48 +88,47 @@
         </svg>
       </button>
     </div>
-<div
-  [ngClass]="{
-    'max-h-screen opacity-100 py-3': isNavbarOpen,
-    'max-h-0 opacity-0 overflow-hidden': !isNavbarOpen
-  }"
-  class="transition-all duration-500 ease-in-out items-center justify-between w-full md:flex md:w-auto md:order-1 md:max-h-none md:opacity-100"
-  id="navbar-default"
->
-  <ul
-    class="flex flex-col p-3 font-medium rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
-  >
-    <li>
-      <a
-        href="#"
-        (click)="closeNavbar()"
-        class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
-        >Home</a
+    <div
+      [ngClass]="{
+        'max-h-screen opacity-100 py-3': isNavbarOpen,
+        'max-h-0 opacity-0 overflow-hidden': !isNavbarOpen
+      }"
+      class="transition-all duration-500 ease-in-out items-center justify-between w-full md:flex md:w-auto md:order-1 md:max-h-none md:opacity-100"
+      id="navbar-default"
+    >
+      <ul
+        class="flex flex-col p-3 font-medium rounded-lg md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0"
       >
-    </li>
-    <li>
-      <a
-        (click)="closeNavbar(); service.gotobottom2()"
-        class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
-        >About</a
-      >
-    </li>
-    <li>
-      <a
-        (click)="closeNavbar(); service.gotobottom3()"
-        class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
-        >Portfolio</a
-      >
-    </li>
-    <li>
-      <a
-        (click)="closeNavbar(); service.gotobottom4()"
-        class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
-        >Contact</a
-      >
-    </li>
-  </ul>
-</div>
+        <li>
+          <a
+            (click)="closeNavbar(); service.gotobottom1()"
+            class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeNavbar(); service.gotobottom2()"
+            class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            (click)="closeNavbar(); service.gotobottom3()"
+            class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
+            >Projects</a
+          >
+        </li>
 
+        <li>
+          <a
+            (click)="closeNavbar(); service.gotobottom4()"
+            class="block px-3 py-2 text-gray-50 md:hover:text-red-500 md:p-0"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>

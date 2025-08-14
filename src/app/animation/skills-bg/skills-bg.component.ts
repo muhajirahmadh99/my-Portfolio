@@ -4,10 +4,11 @@ import * as THREE from 'three';
 @Component({
   selector: 'app-skills-bg',
   templateUrl: './skills-bg.component.html',
-  styleUrls: ['./skills-bg.component.scss']
+  styleUrls: ['./skills-bg.component.scss'],
 })
 export class SkillsBgComponent implements OnInit {
-  @ViewChild('bgCanvas', { static: true }) bgCanvas!: ElementRef<HTMLCanvasElement>;
+  @ViewChild('bgCanvas', { static: true })
+  bgCanvas!: ElementRef<HTMLCanvasElement>;
   scene = new THREE.Scene();
   camera!: THREE.PerspectiveCamera;
   renderer!: THREE.WebGLRenderer;
@@ -20,16 +21,24 @@ export class SkillsBgComponent implements OnInit {
 
   initThree() {
     // Camera
-    this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    this.camera = new THREE.PerspectiveCamera(
+      75,
+      window.innerWidth / window.innerHeight,
+      0.1,
+      1000
+    );
     this.camera.position.z = 5;
 
     // Renderer
-    this.renderer = new THREE.WebGLRenderer({ canvas: this.bgCanvas.nativeElement, alpha: true });
+    this.renderer = new THREE.WebGLRenderer({
+      canvas: this.bgCanvas.nativeElement,
+      alpha: true,
+    });
     this.renderer.setSize(window.innerWidth, window.innerHeight);
 
     // Particles
     const geometry = new THREE.BufferGeometry();
-    const particleCount = 200;
+    const particleCount = 600;
     const positions = new Float32Array(particleCount * 3);
 
     for (let i = 0; i < particleCount * 3; i++) {
@@ -41,6 +50,7 @@ export class SkillsBgComponent implements OnInit {
     const material = new THREE.PointsMaterial({ color: '#1e293b', size: 0.05 });
     this.particles = new THREE.Points(geometry, material);
     this.scene.add(this.particles);
+
 
     // Resize handling
     window.addEventListener('resize', () => {
@@ -58,6 +68,5 @@ export class SkillsBgComponent implements OnInit {
     this.particles.rotation.y += 0.002;
 
     this.renderer.render(this.scene, this.camera);
-  }
+  };
 }
-
