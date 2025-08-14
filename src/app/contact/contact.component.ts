@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-contact',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
+  ngOnInit() {
+    Aos.init({
+      duration: 3000, // ms
+      offset: 200, // px from trigger point
+      once: true, // animate only once
+    });
+  }
 }

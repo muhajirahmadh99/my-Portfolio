@@ -1,84 +1,24 @@
-<div class="section-one w-[100vw] max-sm:min-h-auto" id="home">
+<div class="section-one w-full max-sm:p-4" id="home">
   <app-skills-bg></app-skills-bg>
-  <!-- Background animation -->
   <app-hero></app-hero>
 </div>
 
-<div class="section-two max-sm:h-auto max-sm:p-6 mt-10 w-[100vw]" id="about">
+<div class="section-two w-full max-sm:p-4 mt-10 max-sm:mt-6" id="about">
   <app-about></app-about>
 </div>
-<div
-  class="section-three max-sm:h-auto max-sm:p-6 flex items-center justify-center h-[70vh] w-[100vw]"
-  id="project"
->
+
+<div class="section-three w-full max-sm:p-4 mt-10 max-sm:mt-6" id="project">
   <app-projects></app-projects>
 </div>
 
-<div class="section-four max-sm:h-auto max-sm:p-6 flex items-center justify-center h-[50vh]">
-  <div class="section text-center">
-    <h2
-      class="inline-block text-3xl font-bold text-gray-900 border-b-4 border-[#334155] pb-1"
-    >
-      What I Do
-    </h2>
-
-    <div class="mt-12 flex flex-col sm:flex-row justify-center gap-6 p-4">
-      <!-- Card 1 -->
-      <div
-        class="relative group bg-white shadow-[0_35px_45px_rgba(0,0,0,0.2)] rounded-lg p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300 h-auto sm:h-[250px] w-full sm:w-[40%] flex flex-col items-center cursor-pointer"
-        data-aos="fade-up"
-      >
-        <!-- Icon Badge -->
-        <div
-          class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cyan-500 p-4 rounded-full shadow-lg"
-        >
-          <img
-            src="https://cdn3.iconfinder.com/data/icons/illustricon-tech/512/browser.development-512.png"
-            class="w-12 h-12"
-            alt="Frontend Icon"
-          />
-        </div>
-        <h3 class="text-xl font-bold text-gray-800 mt-8">
-          Front-End Developer
-        </h3>
-        <p class="text-gray-600 mt-3 leading-relaxed">
-          Specializing in Angular, React, and responsive design, delivering
-          pixel-perfect UIs optimized for performance.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div
-        class="relative group bg-white shadow-[0_35px_45px_rgba(0,0,0,0.2)] rounded-lg p-6 hover:shadow-xl hover:scale-105 transition-transform duration-300 h-auto sm:h-[250px] w-full sm:w-[40%] flex flex-col items-center cursor-pointer"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
-        <!-- Icon Badge -->
-        <div
-          class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-cyan-500 p-4 rounded-full shadow-lg"
-        >
-          <img
-            src="https://cdn-icons-png.freepik.com/512/8686/8686102.png"
-            class="w-12 h-12"
-            alt="Backend Icon"
-          />
-        </div>
-        <h3 class="text-xl font-bold text-gray-800 mt-8">Back-End Developer</h3>
-        <p class="text-gray-600 mt-3 leading-relaxed">
-          Experienced with Node.js, Express, and MongoDB, building robust APIs
-          and scalable backend systems.
-        </p>
-      </div>
-    </div>
-  </div>
+<div class="section-four w-full max-sm:p-4 mt-10 max-sm:mt-6">
+  <app-do></app-do>
 </div>
 
-<div class="section-five w-[100vw] h-[70vh] max-sm:h-auto flex items-center justify-center">
+<div class="section-five mt-10 max-sm:mt-6 max-sm:p-4">
   <app-skills></app-skills>
 </div>
 
-<div class="section-six max-sm:p-6 mt-20 max-sm:mt-4 w-full h-auto max-sm:mb-20"
-  id="sec4"
->
+<div id="sec4" class="section-six max-sm:p-4 mt-20 max-sm:mt-6 w-[100vw] flex justify-center h-auto max-sm:mb-10">
   <app-contact></app-contact>
 </div>

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
 })
-export class AboutComponent {
+export class AboutComponent implements OnInit {
+  isMobile = false;
   projects = [
     {
       img: 'https://yourofficehr.com/assets/Logo_1.svg',
@@ -74,4 +75,7 @@ export class AboutComponent {
       roleTitle5: 'Js',
     },
   ];
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 640;
+  }
 }

@@ -14,6 +14,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { HeroComponent } from './hero/hero.component';
+import { DoComponent } from './do/do.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HeroComponent } from './hero/hero.component';
     SkillsComponent,
     ContactComponent,
     HeroComponent,
+    DoComponent,
   ],
   imports: [
     BrowserModule,

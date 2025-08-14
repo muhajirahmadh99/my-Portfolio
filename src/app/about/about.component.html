@@ -22,7 +22,7 @@
           'justify-end': i % 2 === 0,
           'justify-start': i % 2 !== 0
         }"
-        [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"
+       [attr.data-aos]="isMobile ? 'fade-up' : (i % 2 === 0 ? 'fade-right' : 'fade-left')"
       >
         <!-- Empty space for right-side cards -->
         <div *ngIf="i % 2 === 0" class="hidden sm:block sm:w-1/2"></div>

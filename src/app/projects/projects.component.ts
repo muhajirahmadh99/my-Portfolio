@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss'],
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
+  isMobile = false;
   portfolio = [
     {
       img: 'assets/images/mx.png',
@@ -35,4 +37,7 @@ export class ProjectsComponent {
       url: 'https://hasnatech.github.io/voicemake-ng/#/',
     },
   ];
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 640;
+  }
 }
