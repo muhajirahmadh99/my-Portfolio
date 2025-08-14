@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1754916261515,
+  "timestamp": 1755151278871,
   "index": "https://muhajirahmadh99.github.io/my-Portfolio/index.html",
   "assetGroups": [
     {
@@ -13,12 +13,12 @@
       "urls": [
         "https://muhajirahmadh99.github.io/my-Portfolio/favicon.ico",
         "https://muhajirahmadh99.github.io/my-Portfolio/index.html",
-        "https://muhajirahmadh99.github.io/my-Portfolio/main.d52573ececeb3b45.js",
+        "https://muhajirahmadh99.github.io/my-Portfolio/main.c84a310987bf25f2.js",
         "https://muhajirahmadh99.github.io/my-Portfolio/manifest.webmanifest",
         "https://muhajirahmadh99.github.io/my-Portfolio/polyfills.4dcda093c5e8e2fb.js",
         "https://muhajirahmadh99.github.io/my-Portfolio/runtime.186a42f58eea60c2.js",
         "https://muhajirahmadh99.github.io/my-Portfolio/scripts.68ed26d13e2edc19.js",
-        "https://muhajirahmadh99.github.io/my-Portfolio/styles.f6e5cd93f4dfd038.css"
+        "https://muhajirahmadh99.github.io/my-Portfolio/styles.61cc43c38a052b28.css"
       ],
       "patterns": []
     },
@@ -45,8 +45,6 @@
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/Document.html",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/Document_files/js_examples.js",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/MySQL.png",
-        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/a.png",
-        "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/b.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/boot.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/call.png",
         "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/css.png",
@@ -96,8 +94,6 @@
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/Document.html": "afd3f395f5267015fad047ef3178fe1c020ed414",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/Document_files/js_examples.js": "893a47f7635ddf331ef18bdd84f704c856d95b30",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/MySQL.png": "c63751862d6f7a723c9e56b97be85a38429fbb74",
-    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/a.png": "983b4599c9327ccbe1d413601121c6a8a2d675de",
-    "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/b.png": "706ee31042c3975a8a891baf7a0c0ebe10ef9c3f",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/boot.png": "59f072c7a84791470c99c74a7e349d2caf5d7445",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/call.png": "6193008fbbb0468e599f6a611d35d6c9eaf0e9e8",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/css.png": "4484d30ce38447353b8613320fbc762a0c6913ac",
@@ -127,13 +123,13 @@
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/images/web.png": "c09e731cea4adbfeeaf216401978d048f0f1bf0f",
     "https://muhajirahmadh99.github.io/my-Portfolio/assets/video/bg.mp4": "5181f70d8d2ffdbb1b6ff25f3c47610beb832b8f",
     "https://muhajirahmadh99.github.io/my-Portfolio/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://muhajirahmadh99.github.io/my-Portfolio/index.html": "40950869a690cd36ca34c06df4ad177f612c72e1",
-    "https://muhajirahmadh99.github.io/my-Portfolio/main.d52573ececeb3b45.js": "7cd2fc894bb4d5c596751073050ba320fb39869c",
+    "https://muhajirahmadh99.github.io/my-Portfolio/index.html": "9b1385a106a1e7193009b7969e31d66e62c00e12",
+    "https://muhajirahmadh99.github.io/my-Portfolio/main.c84a310987bf25f2.js": "d7e480ac6fef6d1ac6984f3e98d5a5747b715430",
     "https://muhajirahmadh99.github.io/my-Portfolio/manifest.webmanifest": "78111747795c583e1a87c688be411bada4411f32",
     "https://muhajirahmadh99.github.io/my-Portfolio/polyfills.4dcda093c5e8e2fb.js": "c5d5fb810cc201ca430757dc0ccddfe76ba413d2",
     "https://muhajirahmadh99.github.io/my-Portfolio/runtime.186a42f58eea60c2.js": "e588e22dd91732f160ab71802059443e1081ff1b",
     "https://muhajirahmadh99.github.io/my-Portfolio/scripts.68ed26d13e2edc19.js": "cffb6dcf1e317b2859024c20248dd0c50ce6b885",
-    "https://muhajirahmadh99.github.io/my-Portfolio/styles.f6e5cd93f4dfd038.css": "e81311f0bdb04a034721b1d642be7636e28f0d7b"
+    "https://muhajirahmadh99.github.io/my-Portfolio/styles.61cc43c38a052b28.css": "1f03f3016da399668e030a282ec50d19b20ed0d0"
   },
   "navigationUrls": [
     {
