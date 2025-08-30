@@ -11,14 +11,14 @@
         class="flex gap-8 mt-3 max-sm:flex-wrap sm:justify-center md:flex-wrap"
       >
         <div
-          class="max-sm:w-full text-gray-900 rounded-lg shadow-[0_35px_45px_rgba(0,0,0,0.2)] bg-gray-100 hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+          class="max-sm:w-full w-[311px] border-[5px] border-solid border-[#1e293b] text-gray-900 rounded-lg shadow-[0_35px_45px_rgba(0,0,0,0.2)] bg-gray-100 hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
           *ngFor="let item of portfolio; let i = index"
           [attr.data-aos]="
             isMobile ? 'fade-up' : i % 2 === 0 ? 'fade-right' : 'fade-left'
           "
         >
           <img [src]="item.img" class="h-44" alt="..." />
-          <div class="p-3">
+          <div class="p-3 border-t-2 border-solid border-[#1e293b]">
             <h5 class="text-lg font-bold">{{ item.title }}</h5>
             <p class="">
               {{ item.description }}

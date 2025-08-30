@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-do',
   templateUrl: './do.component.html',
-  styleUrls: ['./do.component.scss']
+  styleUrls: ['./do.component.scss'],
 })
-export class DoComponent {
+export class DoComponent implements OnInit {
+  isMobile = false;
 
+  ngOnInit(): void {
+    this.isMobile = window.innerWidth < 640;
+  }
 }

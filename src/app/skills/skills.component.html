@@ -8,11 +8,11 @@
     <div class="flex gap-2 flex-wrap justify-center">
       <div
         #skillCard
-        class="w-44 rounded-lg h-48 p-2 shadow-[0_35px_45px_rgba(0,0,0,0.2)] bg-white sm:w-[200px] hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+        class=" rounded-lg h-40 w-[160px]  shadow-[0_35px_45px_rgba(0,0,0,0.2)] bg-white hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
         *ngFor="let item of skills; let i = index"
         [ngClass]="'bounce-delay-' + (i % 3)"
       >
-        <img [src]="item.img" class="mt-2 w-fit h-28 mx-auto" alt="..." />
+        <img [src]="item.img" class="mt-2 w-[96px] mx-auto" alt="..." />
         <h5 class="text-lg font-bold text-center text-gray-700 mt-3">
           {{ item.course }}
         </h5>
