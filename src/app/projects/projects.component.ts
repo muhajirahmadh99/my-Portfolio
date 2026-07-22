@@ -13,28 +13,36 @@ export class ProjectsComponent implements OnInit {
       img: 'assets/images/mx.png',
       title: 'Marketing Excellence',
       description:
-        'A fully functional Quiz website built using Angular and typescript.',
+        'An interactive quiz platform built with Angular and TypeScript, featuring structured questions, score calculation, and a responsive user interface.',
       url: 'https://hasnatech.github.io/MarketingExcellence/#/',
     },
     {
       img: 'assets/images/ec.png',
-      title: 'E-commerce Website',
+      title: 'E-Commerce Website',
       description:
-        'A fully functional e-commerce website built using Laravel and Vue.',
+        'A full-stack e-commerce application developed with Laravel and Vue.js, providing an intuitive product-browsing and online shopping experience.',
       url: 'https://muhajirahmadh99.github.io/Ibn_Anwaar/#/home',
     },
     {
       img: 'assets/images/mat.png',
       title: 'Matrimony Website',
       description:
-        'A responsive matrimony website built using Angular and Firebase.',
+        'A responsive matchmaking platform built with Angular and Firebase, designed to display and manage user profiles across desktop and mobile devices.',
       url: 'https://muhajirahmadh99.github.io/saptjanm-matrimony/',
     },
     {
       img: 'assets/images/vs.png',
       title: 'Voice Make',
-      description: 'A responsive matrimony website built using Angular.',
+      description:
+        'A responsive voice-generation application developed with Angular, offering a simple and user-friendly interface for creating voice content.',
       url: 'https://hasnatech.github.io/voicemake-ng/#/',
+    },
+    {
+      img: 'assets/images/yohrDash.png',
+      title: 'HR Management Application',
+      description:
+        'A comprehensive HR management system built with React, TypeScript, and Material UI, covering employee profiles, attendance, leave, payroll, reports, and notifications.',
+      url: 'https://yourofficepartners.com/',
     },
   ];
   ngOnInit(): void {

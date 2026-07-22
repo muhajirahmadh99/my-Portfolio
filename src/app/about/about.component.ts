@@ -8,18 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class AboutComponent implements OnInit {
   isMobile = false;
   projects = [
-    {
-      img: 'https://yourofficehr.com/assets/Logo_1.svg',
-      office: 'Your Office Partners',
-      exp: 'July 2025 – Present',
-      role: 'React Developer',
+        {
+      img: 'assets/images/infoOnclick.jpg',
+      office: 'Info OnClick LLC',
+      exp: 'Sep 2021 – Mar 2022',
+      role: 'Angular Developer Trainee',
       description: `<li>
-                Developed responsive UI modules using React, JavaScript &
-                Material UI.
+                Developed UI modules using Angular, JavaScript & Material UI.
               </li>
-              <li>
-                Integrated REST APIs and improved page performance by 20%.
-              </li>`,
+              <li>Worked on API integration & UI bug fixing.</li>`,
       roleimg1: 'assets/images/react.png',
       roleTitle1: 'React',
       roleimg2: 'assets/images/html.png',
@@ -32,7 +29,7 @@ export class AboutComponent implements OnInit {
       roleTitle5: 'Js',
     },
     {
-      img: 'https://hasnatech.com/assets/images/logo.png',
+      img: 'assets/images/hasna.jpeg',
       office: 'Hasna Technology',
       exp: 'Feb 2023 – Sep 2024',
       role: 'Angular Developer',
@@ -54,15 +51,18 @@ export class AboutComponent implements OnInit {
       roleimg5: 'assets/images/js.png',
       roleTitle5: 'Js',
     },
-    {
-      img: 'http://www.infoonclick.com/assets/info.png',
-      office: 'Info OnClick LLC',
-      exp: 'Sep 2021 – Mar 2022',
-      role: 'Angular Developer Trainee',
+        {
+      img: 'assets/images/logo.svg',
+      office: 'Your Office Partners',
+      exp: 'July 2025 – Present',
+      role: 'React Developer',
       description: `<li>
-                Developed UI modules using Angular, JavaScript & Material UI.
+                Developed responsive UI modules using React, JavaScript &
+                Material UI.
               </li>
-              <li>Worked on API integration & UI bug fixing.</li>`,
+              <li>
+                Integrated REST APIs and improved page performance by 20%.
+              </li>`,
       roleimg1: 'assets/images/react.png',
       roleTitle1: 'React',
       roleimg2: 'assets/images/html.png',

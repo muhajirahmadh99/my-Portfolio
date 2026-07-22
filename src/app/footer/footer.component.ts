@@ -6,6 +6,7 @@ import { Component , HostListener } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  currentYear = new Date().getFullYear();
   isShow: any = false;
   topPosToStartShowing = 300;
 

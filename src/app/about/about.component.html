@@ -1,96 +1,196 @@
-  <div class="section">
+<section
+  id="about"
+  class="relative overflow-hidden  px-5 py-20 sm:px-8 lg:px-12"
+>
+  <!-- Background decoration -->
+  <div
+    class="absolute -left-32 top-32 h-80 w-80 rounded-full bg-blue-300/20 blur-3xl"
+  ></div>
+
+  <div
+    class="absolute -right-32 bottom-20 h-80 w-80 rounded-full bg-purple-300/20 blur-3xl"
+  ></div>
+
+  <div class="relative mx-auto max-w-6xl">
     <!-- Heading -->
-    <div class="text-center">
-      <div
-        class="inline-block text-3xl font-bold text-gray-900 border-b-4 border-[#1e293b] pb-1 max-sm:mx-1 mx-[160px]"
+    <div class="mb-16 text-center">
+      <span
+        class="inline-block rounded-full bg-blue-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-slate-600"
       >
-        About Myself
-      </div>
+        About Me
+      </span>
+
+      <h2 class="mt-4 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+        Professional Journey
+      </h2>
+
+      <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
+        My experience as a Software Engineer, building responsive,
+        user-friendly, and scalable applications using modern technologies.
+      </p>
+
+      <div
+        class="mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-slate-500 to-cyan-500"
+      ></div>
     </div>
 
-    <div class="relative w-full max-w-4xl mx-auto mt-4">
-      <!-- Vertical Line -->
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Timeline line -->
       <div
-        class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-4 border-[#1e293b] max-sm:hidden"
+        class="absolute bottom-0 left-5 top-0 w-1 -translate-x-1/2 rounded-full bg-gradient-to-b from-slate-500 via-slate-500 to-slate-300 md:left-1/2"
       ></div>
 
-      <!-- Loop Projects -->
+      <!-- Timeline items -->
       <div
         *ngFor="let item of projects; let i = index"
-        class="flex flex-col sm:flex-row w-full mb-8"
-        [ngClass]="{
-          'justify-end': i % 2 === 0,
-          'justify-start': i % 2 !== 0
-        }"
-       [attr.data-aos]="isMobile ? 'fade-up' : (i % 2 === 0 ? 'fade-right' : 'fade-left')"
+        class="relative mb-12 grid grid-cols-1 md:grid-cols-2 md:gap-20"
+        [attr.data-aos]="
+          isMobile ? 'fade-up' : i % 2 === 0 ? 'fade-left' : 'fade-right'
+        "
       >
-        <!-- Empty space for right-side cards -->
-        <div *ngIf="i % 2 === 0" class="hidden sm:block sm:w-1/2"></div>
-
-        <!-- Card -->
+        <!-- Timeline number -->
         <div
-          class="sm:w-1/2"
-          [ngClass]="{ 'sm:pl-8': i % 2 === 0, 'sm:pr-8': i % 2 !== 0 }"
+          class="absolute left-5 top-7 z-20 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-slate-600 to-slate-600 text-sm font-bold text-white shadow-lg shadow-blue-500/30 md:left-1/2"
         >
+          {{ i + 1 }}
+        </div>
+
+        <!-- Experience card -->
+        <article
+          class="group relative ml-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-blue-200 hover:shadow-2xl md:ml-0"
+          [ngClass]="{
+            'md:col-start-2': i % 2 === 0,
+            'md:col-start-1 md:row-start-1': i % 2 !== 0
+          }"
+        >
+          <!-- Top accent -->
           <div
-            class="card p-3 rounded-md bg-white cursor-pointer shadow-[0_35px_45px_rgba(0,0,0,0.2)] hover:shadow-xl hover:scale-105 transition-transform duration-300"
-          >
-            <div class="flex items-center gap-3">
-              <img
-                [src]="item.img"
-                alt="Logo"
-                class="w-10 h-10 object-contain"
-              />
-              <div>
-                <h4 class="font-semibold text-gray-700">{{ item.office }}</h4>
-                <span class="text-xs text-gray-500">{{ item.exp }}</span>
+            class="h-1.5 w-full bg-gradient-to-r from-slate-600 via-slate-500 to-cyan-500"
+          ></div>
+
+          <div class="p-5 sm:p-7">
+            <!-- Company details -->
+            <div class="flex items-start gap-4">
+              <div
+                class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-2 shadow-sm"
+              >
+                <img
+                  [src]="item.img"
+                  [attr.alt]="item.office + ' logo'"
+                  class="h-full w-full object-contain"
+                />
+              </div>
+
+              <div class="min-w-0 flex-1">
+                <h3
+                  class="text-lg font-bold text-slate-900 transition-colors duration-300 group-hover:text-slate-900"
+                >
+                  {{ item.office }}
+                </h3>
+
+                <div
+                  class="mt-1 inline-flex items-center gap-1.5 text-sm text-slate-500"
+                >
+                  <svg
+                    class="h-4 w-4 text-slate-500"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 7V3m8 4V3M5 11h14M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                    />
+                  </svg>
+
+                  {{ item.exp }}
+                </div>
               </div>
             </div>
-            <p class="text-sm font-bold text-gray-600 mt-2">{{ item.role }}</p>
-            <ul
-              class="list-inside text-gray-600 text-sm mt-2 space-y-1 list-none"
+
+            <!-- Role -->
+            <div
+              class="mt-5 inline-flex items-center rounded-lg bg-blue-50 px-3 py-1.5 text-sm font-semibold text-slate-700"
             >
-              <li [innerHTML]="item.description"></li>
-            </ul>
-            <div class="flex gap-2 mt-2 max-sm:flex-wrap max-sm:mt-3">
+              {{ item.role }}
+            </div>
+
+            <!-- Description -->
+            <div
+              class="mt-5 border-l-2 border-slate-200 pl-4 text-sm leading-7 text-slate-600"
+              [innerHTML]="item.description"
+            ></div>
+
+            <!-- Technologies -->
+            <div class="mt-6 flex flex-wrap gap-2">
               <div
-                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+                *ngIf="item.roleTitle1"
+                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
               >
-                <div class="">
-                  <img [src]="item.roleimg1" class="max-sm:max-w-[20px] max-w-6" alt="" />
-                </div>
-                <div class="text-sm">{{ item.roleTitle1 }}</div>
+                <img
+                  *ngIf="item.roleimg1"
+                  [src]="item.roleimg1"
+                  [attr.alt]="item.roleTitle1"
+                  class="h-5 w-5 object-contain"
+                />
+
+                {{ item.roleTitle1 }}
               </div>
+
               <div
-                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+                *ngIf="item.roleTitle2"
+                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
               >
-                <div class="">
-                  <img [src]="item.roleimg2" class="max-sm:max-w-[20px] max-w-6" alt="" />
-                </div>
-                <div class="text-sm">{{ item.roleTitle2 }}</div>
+                <img
+                  *ngIf="item.roleimg2"
+                  [src]="item.roleimg2"
+                  [attr.alt]="item.roleTitle2"
+                  class="h-5 w-5 object-contain"
+                />
+
+                {{ item.roleTitle2 }}
               </div>
+
               <div
-                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+                *ngIf="item.roleTitle3"
+                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
               >
-                <div class="">
-                  <img [src]="item.roleimg3" class="max-sm:max-w-[20px] max-w-6" alt="" />
-                </div>
-                <div class="text-sm">{{ item.roleTitle3 }}</div>
+                <img
+                  *ngIf="item.roleimg3"
+                  [src]="item.roleimg3"
+                  [attr.alt]="item.roleTitle3"
+                  class="h-5 w-5 object-contain"
+                />
+
+                {{ item.roleTitle3 }}
               </div>
+
               <div
-                class="flex gap-2 px-3 py-1 bg-[#516179] text-gray-100 rounded-lg uppercase items-center"
+                *ngIf="item.roleTitle4"
+                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
               >
-                <div class="">
-                  <img  [src]="item.roleimg4" class="max-sm:max-w-[20px] max-w-6" alt="" />
-                </div>
-                <div class="text-sm">{{ item.roleTitle4 }}</div>
+                <img
+                  *ngIf="item.roleimg4"
+                  [src]="item.roleimg4"
+                  [attr.alt]="item.roleTitle4"
+                  class="h-5 w-5 object-contain"
+                />
+
+                {{ item.roleTitle4 }}
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Empty space for left-side cards -->
-        <div *ngIf="i % 2 !== 0" class="hidden sm:block sm:w-1/2"></div>
+        </article>
       </div>
+
+      <!-- Timeline end -->
+      <div
+        class="relative z-20 mx-auto flex h-5 w-5 rounded-full border-4 border-white bg-slate-400 shadow-md max-md:ml-[10px]"
+      ></div>
     </div>
   </div>
+</section>

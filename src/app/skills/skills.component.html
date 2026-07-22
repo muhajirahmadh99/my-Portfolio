@@ -1,21 +1,89 @@
-  <div class="section md:mx-[150px] text-center">
-    <h2
-      class="inline-block text-3xl font-bold text-gray-900 border-b-4 border-[#334155] pb-1 mb-4 max-sm:mx-10"
-    >
-      My Skills
-    </h2>
+<section
+  id="skills"
+  class="relative overflow-hidden bg-gradient-to-b px-5 py-20 sm:px-8 lg:px-12"
+>
+  <!-- Background decorations -->
+  <div
+    class="absolute -left-28 top-24 h-72 w-72 rounded-full bg-blue-300/20 blur-3xl"
+  ></div>
 
-    <div class="flex gap-2 flex-wrap justify-center">
+  <div
+    class="absolute -right-28 bottom-10 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl"
+  ></div>
+
+  <div class="relative mx-auto max-w-7xl">
+    <!-- Heading -->
+    <div class="mb-14 text-center" data-aos="fade-up">
+      <span
+        class="inline-block rounded-full bg-slate-100 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-slate-600"
+      >
+        Technologies
+      </span>
+
+      <h2 class="mt-4 text-3xl font-extrabold text-slate-900 sm:text-4xl">
+        My Technical Skills
+      </h2>
+
+      <p
+        class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base"
+      >
+        Technologies and tools I use to build modern, responsive, and scalable
+        software applications.
+      </p>
+
       <div
+        class="mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-slate-500 to-cyan-500"
+      ></div>
+    </div>
+
+    <!-- Skills grid -->
+    <div
+      class="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+    >
+      <article
         #skillCard
-        class=" rounded-lg h-40 w-[160px]  shadow-[0_35px_45px_rgba(0,0,0,0.2)] bg-white hover:shadow-xl hover:scale-105 transition-transform duration-300 cursor-pointer"
         *ngFor="let item of skills; let i = index"
         [ngClass]="'bounce-delay-' + (i % 3)"
+        data-aos="fade-up"
+        [attr.data-aos-delay]="(i % 6) * 75"
+        class="group relative flex min-h-[175px] cursor-pointer flex-col items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-xl hover:shadow-cyan-500/10"
       >
-        <img [src]="item.img" class="mt-2 w-[96px] mx-auto" alt="..." />
-        <h5 class="text-lg font-bold text-center text-gray-700 mt-3">
+        <!-- Top accent -->
+        <div
+          class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-slate-500 to-cyan-500 transition-transform duration-500 group-hover:scale-x-100"
+        ></div>
+
+        <!-- Skill number -->
+        <span
+          class="absolute right-3 top-3 text-xs font-bold text-slate-300 transition-colors duration-300 group-hover:text-cyan-500"
+        >
+          {{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }}
+        </span>
+
+        <!-- Icon container -->
+        <div
+          class="flex h-20 w-20 items-center justify-center rounded-2xl border border-slate-100 bg-slate-50 p-3 transition-all duration-500 group-hover:rotate-3 group-hover:scale-110 group-hover:border-cyan-100 group-hover:bg-cyan-50"
+        >
+          <img
+            [src]="item.img"
+            [attr.alt]="item.course + ' logo'"
+            loading="lazy"
+            class="h-full w-full object-contain transition-transform duration-500"
+          />
+        </div>
+
+        <!-- Skill name -->
+        <h3
+          class="mt-5 text-sm font-bold text-slate-700 transition-colors duration-300 group-hover:text-cyan-700 sm:text-base"
+        >
           {{ item.course }}
-        </h5>
-      </div>
+        </h3>
+
+        <!-- Bottom decoration -->
+        <div
+          class="mt-2 h-0.5 w-0 rounded-full bg-cyan-500 transition-all duration-500 group-hover:w-10"
+        ></div>
+      </article>
     </div>
   </div>
+</section>

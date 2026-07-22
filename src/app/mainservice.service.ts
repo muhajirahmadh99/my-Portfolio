@@ -1,35 +1,46 @@
-import { Injectable } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Inject, Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MainserviceService {
-  constructor() {}
   dark_mode = false;
 
-  gotobottom1() {
-    document
-      .querySelector('#home')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-  gotobottom2() {
-    document
-      .querySelector('#about')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-  gotobottom3() {
-    document
-      .querySelector('#project')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  scrollToSection(sectionId: string): void {
+    const element = this.document.getElementById(sectionId);
+    const windowRef = this.document.defaultView;
+
+    if (!element || !windowRef) {
+      return;
+    }
+
+    const navbarOffset = 40;
+
+    const elementPosition =
+      element.getBoundingClientRect().top + windowRef.scrollY;
+
+    windowRef.scrollTo({
+      top: elementPosition - navbarOffset,
+      behavior: 'smooth',
+    });
   }
 
-  // gotobottom2() {
-  //   document.querySelector("#sec3")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  // }
+  gotobottom1(): void {
+    this.scrollToSection('home');
+  }
 
-  gotobottom4() {
-    document
-      .querySelector('#sec4')
-      ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  gotobottom2(): void {
+    this.scrollToSection('about');
+  }
+
+  gotobottom3(): void {
+    this.scrollToSection('projects');
+  }
+
+  gotobottom4(): void {
+    this.scrollToSection('contact');
   }
 }
