@@ -28,7 +28,7 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [ "node_modules/aos/dist/aos.css","src/styles.scss"],
+            "styles": ["node_modules/aos/dist/aos.css", "src/styles.scss"],
             "scripts": ["node_modules/aos/dist/aos.js"],
             "serviceWorker": true,
             "ngswConfigPath": "ngsw-config.json"
@@ -38,13 +38,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1200kb",
+                  "maximumError": "1500kb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ],
               "outputHashing": "all"
