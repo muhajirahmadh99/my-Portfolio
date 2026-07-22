@@ -2,10 +2,10 @@
   class="sticky top-0 z-50 px-0 py-0 md:top-4 md:px-5 md:py-2"
 >
   <nav
-    class="mx-auto max-w-7xl border-b border-white/10 bg-slate-950/95 shadow-xl backdrop-blur-xl md:rounded-2xl md:border"
+    class="mx-auto max-w-7xl border-b border-white/10 bg-slate-950/95 shadow-xl backdrop-blur-xl lg:rounded-full md:rounded-full md:border"
   >
     <div
-      class="mx-auto flex min-h-[72px] flex-wrap items-center justify-between px-5 md:px-7"
+      class="mx-auto flex min-h-[72px] flex-wrap items-center justify-between px-5 md:px-7 p-3"
     >
       <!-- Logo -->
       <button
@@ -41,7 +41,7 @@
           <li>
             <button
               type="button"
-              (click)="service.gotobottom1()"
+               (click)="navigateToSection('home')"
               class="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white"
             >
               Home
@@ -51,7 +51,7 @@
           <li>
             <button
               type="button"
-              (click)="service.gotobottom2()"
+              (click)="navigateToSection('about')"
               class="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white"
             >
               About
@@ -61,7 +61,7 @@
           <li>
             <button
               type="button"
-              (click)="service.gotobottom3()"
+               (click)="navigateToSection('projects')"
               class="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white"
             >
               Projects
@@ -71,7 +71,7 @@
           <li>
             <button
               type="button"
-              (click)="service.gotobottom4()"
+               (click)="navigateToSection('contact')"
               class="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white"
             >
               Contact
@@ -135,7 +135,7 @@
         <button
           type="button"
           (click)="toggleNavbar()"
-          class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-400 md:hidden"
+          class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-slate-400 md:hidden"
           aria-controls="mobile-navbar"
           [attr.aria-expanded]="isNavbarOpen"
           [attr.aria-label]="isNavbarOpen ? 'Close menu' : 'Open menu'"
@@ -191,7 +191,7 @@
           <li>
             <button
               type="button"
-              (click)="closeNavbar(); service.gotobottom1()"
+              (click)="navigateToSection('home')"
               class="flex w-full items-center rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
             >
               Home
@@ -201,7 +201,7 @@
           <li>
             <button
               type="button"
-              (click)="closeNavbar(); service.gotobottom2()"
+              (click)="navigateToSection('about')"
               class="flex w-full items-center rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
             >
               About
@@ -211,7 +211,7 @@
           <li>
             <button
               type="button"
-              (click)="closeNavbar(); service.gotobottom3()"
+              (click)="navigateToSection('projects')"
               class="flex w-full items-center rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
             >
               Projects
@@ -221,25 +221,10 @@
           <li>
             <button
               type="button"
-              (click)="closeNavbar(); service.gotobottom4()"
-              class="flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 px-4 py-3 text-left text-sm font-semibold text-white"
+               (click)="navigateToSection('contact')"
+              class="flex w-full items-center rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
             >
-              Contact Me
-
-              <svg
-                class="h-4 w-4"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M17 8l4 4m0 0-4 4m4-4H3"
-                />
-              </svg>
+              Contact
             </button>
           </li>
         </ul>

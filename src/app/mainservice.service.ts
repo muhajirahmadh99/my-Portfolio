@@ -10,20 +10,25 @@ export class MainserviceService {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   scrollToSection(sectionId: string): void {
-    const element = this.document.getElementById(sectionId);
     const windowRef = this.document.defaultView;
+    const element = this.document.getElementById(sectionId);
 
     if (!element || !windowRef) {
       return;
     }
 
-    const navbarOffset = 40;
+    const isMobile = windowRef.innerWidth < 768;
 
-    const elementPosition =
-      element.getBoundingClientRect().top + windowRef.scrollY;
+    // Mobile navbar is approximately 72px high
+    const navbarOffset = isMobile ? 20 : 40;
+
+    const targetPosition =
+      element.getBoundingClientRect().top +
+      windowRef.scrollY -
+      navbarOffset;
 
     windowRef.scrollTo({
-      top: elementPosition - navbarOffset,
+      top: Math.max(targetPosition, 0),
       behavior: 'smooth',
     });
   }

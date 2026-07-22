@@ -4,18 +4,20 @@ import { Router, NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
   activeRoute: string = '';
 
-  constructor(private router: Router, public service: MainserviceService) {
+  constructor(
+    private router: Router,
+    public service: MainserviceService,
+  ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.activeRoute = event.url; // Set the active route based on the URL
       }
     });
-
 
     this.service.dark_mode = localStorage.getItem('darkMode') == 'true';
   }
@@ -30,8 +32,21 @@ export class HeaderComponent {
     this.isNavbarOpen = false;
   }
 
-  toggleDarkMode(){
+  toggleDarkMode() {
     this.service.dark_mode = !this.service.dark_mode;
     localStorage.setItem('darkMode', this.service.dark_mode ? 'true' : 'false');
+  }
+
+  navigateToSection(sectionId: string): void {
+    const menuWasOpen = this.isNavbarOpen;
+
+    this.isNavbarOpen = false;
+
+    // Your mobile menu uses duration-500
+    const delay = menuWasOpen ? 500 : 0;
+
+    setTimeout(() => {
+      this.service.scrollToSection(sectionId);
+    }, delay);
   }
 }
