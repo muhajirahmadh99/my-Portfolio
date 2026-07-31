@@ -1,33 +1,35 @@
 <header
-  class="sticky top-0 z-50 px-0 py-0 md:top-4 md:px-5 md:py-2"
+  class="mobile-safe-header sticky top-0 z-50 w-full bg-slate-950 md:top-4 md:bg-transparent md:px-5 md:pb-2"
 >
   <nav
-    class="mx-auto max-w-7xl border-b border-white/10 bg-slate-950/95 shadow-xl backdrop-blur-xl lg:rounded-full md:rounded-full md:border"
+    class="mx-auto w-full max-w-7xl border-b border-white/10 bg-slate-950/95 shadow-xl backdrop-blur-xl md:rounded-full md:border"
   >
     <div
-      class="mx-auto flex min-h-[72px] flex-wrap items-center justify-between px-5 md:px-7 p-3"
+      class="mx-auto flex min-h-[72px] flex-wrap items-center justify-between gap-x-2 px-4 py-3 sm:px-5 md:px-7"
     >
       <!-- Logo -->
       <button
         type="button"
         (click)="closeNavbar(); service.gotobottom1()"
-        class="group flex items-center gap-3"
+        class="group flex min-w-0 flex-1 items-center gap-2 sm:gap-3 md:flex-none"
         aria-label="Go to home section"
       >
         <span
-          class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-900 text-sm font-extrabold text-white shadow-lg shadow-blue-500/20 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105"
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-900 text-sm font-extrabold text-white shadow-lg shadow-blue-500/20 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-105"
         >
           MA
         </span>
 
-        <span class="text-left">
+        <span class="min-w-0 text-left">
           <span
-            class="block text-sm font-bold tracking-wide text-white sm:text-base"
+            class="block truncate text-[13px] font-bold tracking-wide text-white sm:text-base"
           >
             MUHAJIR AHMAD
           </span>
 
-          <span class="block text-[10px] tracking-[0.2em] text-slate-400">
+          <span
+            class="block truncate text-[9px] tracking-[0.15em] text-slate-400 sm:text-[10px] sm:tracking-[0.2em]"
+          >
             SOFTWARE ENGINEER
           </span>
         </span>
@@ -41,7 +43,7 @@
           <li>
             <button
               type="button"
-               (click)="navigateToSection('home')"
+              (click)="navigateToSection('home')"
               class="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white"
             >
               Home
@@ -61,7 +63,7 @@
           <li>
             <button
               type="button"
-               (click)="navigateToSection('projects')"
+              (click)="navigateToSection('projects')"
               class="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white"
             >
               Projects
@@ -71,7 +73,7 @@
           <li>
             <button
               type="button"
-               (click)="navigateToSection('contact')"
+              (click)="navigateToSection('contact')"
               class="rounded-lg px-4 py-2 text-sm font-medium text-slate-300 transition-all duration-300 hover:bg-white/10 hover:text-white"
             >
               Contact
@@ -180,10 +182,9 @@
       <div
         id="mobile-navbar"
         [ngClass]="{
-          'max-h-96 border-t border-white/10 py-4 opacity-100':
-            isNavbarOpen,
+          'max-h-96 border-t border-white/10 py-4 opacity-100': isNavbarOpen,
           'max-h-0 overflow-hidden border-transparent py-0 opacity-0':
-            !isNavbarOpen
+            !isNavbarOpen,
         }"
         class="w-full transition-all duration-500 ease-in-out md:hidden"
       >
@@ -221,7 +222,7 @@
           <li>
             <button
               type="button"
-               (click)="navigateToSection('contact')"
+              (click)="navigateToSection('contact')"
               class="flex w-full items-center rounded-xl px-4 py-3 text-left text-sm font-medium text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
             >
               Contact

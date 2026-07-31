@@ -20,7 +20,7 @@ export class MainserviceService {
     const isMobile = windowRef.innerWidth < 768;
 
     // Mobile navbar is approximately 72px high
-    const navbarOffset = isMobile ? 20 : 40;
+    const navbarOffset = isMobile ? 80 : 120;
 
     const targetPosition =
       element.getBoundingClientRect().top +

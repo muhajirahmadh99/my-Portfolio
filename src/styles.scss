@@ -1,22 +1,130 @@
+@import 'aos/dist/aos.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'aos/dist/aos.css';
 
-body{
-  font-family: sans-serif;
-  background-color:  #f5f6fa;
+/* Global responsive reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100dvh;
+  font-family: sans-serif;
+  background-color: #f5f6fa;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+app-root {
+  display: block;
+  width: 100%;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+/* Prevent images from overflowing */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent long text from overflowing */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  overflow-wrap: break-word;
+}
+
+/* Dark/light mode transition */
 body:not(.dark-mode-preloading) {
-    transition: all 0.3s linear;
+  transition:
+    background-color 0.3s linear,
+    color 0.3s linear;
+}
+
+body.dark-mode {
+  background-color: #2d3436;
+  color: #dfe6e9;
+}
+
+body.light-mode {
+  background-color: #f5f6fa;
+  color: #2d3436;
+}
+
+/* iPhone safe-area support */
+.safe-area-header {
+  padding-top: max(12px, env(safe-area-inset-top));
+  padding-right: max(16px, env(safe-area-inset-right));
+  padding-left: max(16px, env(safe-area-inset-left));
+}
+
+.safe-area-bottom {
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
+}
+
+/* Mobile responsive helpers */
+@media screen and (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
   }
 
-  body.dark-mode {
-    background-color: #2d3436;
-    color: #dfe6e9;
+  .mobile-full-width {
+    width: 100% !important;
+    max-width: 100% !important;
   }
+}
 
-  body.light-mode {
-    background-color: #dfe6e9;
-    color: #2d3436;
+/* Very small mobile devices */
+@media screen and (max-width: 380px) {
+  body {
+    font-size: 14px;
   }
+}
+.mobile-safe-header {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+body:not(.dark-mode-preloading) {
+  transition:
+    background-color 0.3s linear,
+    color 0.3s linear;
+}
+
+body.dark-mode {
+  background-color: #2d3436;
+  color: #dfe6e9;
+}
+
+body.light-mode {
+  background-color: #dfe6e9;
+  color: #2d3436;
+}
+
+/* Prevent navigation from covering sections */
+section,
+[id] {
+  scroll-margin-top: calc(90px + env(safe-area-inset-top, 0px));
+}
