@@ -4,97 +4,173 @@
 >
   <!-- Background decorations -->
   <div
-    class="absolute -left-28 top-20 h-72 w-72 rounded-full bg-blue-300/20 blur-3xl"
+    class="pointer-events-none absolute -left-28 top-20 h-80 w-80 rounded-full bg-cyan-300/20 blur-3xl"
   ></div>
-
   <div
-    class="absolute -right-28 bottom-10 h-72 w-72 rounded-full bg-purple-300/20 blur-3xl"
+    class="pointer-events-none absolute -right-28 bottom-10 h-96 w-96 rounded-full bg-blue-300/20 blur-3xl"
   ></div>
 
-<div class="relative mx-auto max-w-7xl">
-  <!-- Heading -->
-  <div class="mb-14 text-center">
-    <span
-      class="inline-block rounded-full bg-blue-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-slate-600"
-    >
-      My Expertise
-    </span>
-
-    <h2 class="mt-4 text-3xl font-extrabold text-slate-900 sm:text-4xl">
-      What I Do
-    </h2>
-
-    <p
-      class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base"
-    >
-      I design and develop reliable software solutions by combining modern
-      user interfaces, efficient business logic, and scalable integrations.
-    </p>
-
-    <div
-      class="mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-slate-500 to-cyan-500"
-    ></div>
-  </div>
-
-  <!-- Expertise cards -->
-  <div class="grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3">
-    <article
-      *ngFor="let item of expertiseCards; let i = index"
-      class="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 text-left shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-cyan-300 hover:shadow-2xl"
-      [ngClass]="{
-        'md:col-span-2 lg:col-span-1':
-          i === expertiseCards.length - 1 &&
-          expertiseCards.length % 2 !== 0
-      }"
-      data-aos="fade-up"
-      [attr.data-aos-delay]="item.animationDelay"
-    >
-      <!-- Card number -->
+  <div class="relative mx-auto max-w-7xl">
+    <!-- Heading -->
+    <div class="mb-14 text-center" data-aos="fade-up">
       <span
-        class="absolute right-5 top-3 text-6xl font-black text-slate-100 transition-colors group-hover:text-cyan-50"
+        class="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-700"
       >
-        0{{ i + 1 }}
+        <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
+        My Expertise
       </span>
 
-      <!-- Icon -->
-      <div
-        class="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-slate-500 to-cyan-700 text-white shadow-lg shadow-cyan-500/25 transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110"
+      <h2
+        class="mt-5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
       >
-        <svg
-          class="h-7 w-7"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.8"
-            [attr.d]="item.iconPath"
-          />
-        </svg>
-      </div>
-
-      <!-- Content -->
-      <h3 class="mt-6 text-xl font-bold text-slate-900">
-        {{ item.title }}
-      </h3>
-
-      <p class="mt-3 flex-1 text-sm leading-7 text-slate-600">
-        {{ item.description }}
-      </p>
-
-      <!-- Technology tags -->
-      <div class="mt-6 flex flex-wrap gap-2">
+        What I
         <span
-          *ngFor="let tag of item.tags"
-          class="rounded-lg border border-cyan-100 bg-cyan-50 px-3 py-1.5 text-xs font-semibold text-cyan-700 transition-colors duration-300 hover:border-cyan-300 hover:bg-cyan-100"
+          class="bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent"
         >
-          {{ tag }}
+          do
         </span>
+      </h2>
+
+      <p
+        class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base"
+      >
+        I design and develop reliable software solutions by combining modern
+        user interfaces, efficient business logic, and scalable integrations.
+      </p>
+    </div>
+
+    <!-- Expertise cards -->
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <article
+        *ngFor="let item of expertiseCards; let i = index"
+        (mousemove)="onCardMove($event)"
+        class="spotlight group relative flex h-full flex-col overflow-hidden rounded-3xl border border-slate-200 bg-white/90 p-7 shadow-sm backdrop-blur transition-all duration-500 hover:-translate-y-1.5 hover:border-cyan-200 hover:shadow-2xl hover:shadow-cyan-100 sm:p-8"
+        [ngClass]="{
+          'md:col-span-2 lg:col-span-1':
+            i === expertiseCards.length - 1 && expertiseCards.length % 2 !== 0
+        }"
+        data-aos="fade-up"
+        [attr.data-aos-delay]="item.animationDelay"
+      >
+        <!-- Top gradient bar on hover -->
+        <span
+          class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-cyan-400 to-blue-600 transition-transform duration-500 group-hover:scale-x-100"
+        ></span>
+
+        <div class="relative flex items-start justify-between">
+          <!-- Icon -->
+          <div
+            class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-700 text-white shadow-lg shadow-cyan-500/25 transition-transform duration-500 group-hover:-rotate-6 group-hover:scale-110"
+          >
+            <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.8"
+                [attr.d]="item.iconPath"
+              />
+            </svg>
+          </div>
+
+          <!-- Card number -->
+          <span
+            class="font-mono text-sm font-semibold text-slate-300 transition-colors duration-300 group-hover:text-cyan-500"
+          >
+            0{{ i + 1 }}
+          </span>
+        </div>
+
+        <!-- Content -->
+        <h3 class="relative mt-6 text-xl font-bold text-slate-900">
+          {{ item.title }}
+        </h3>
+
+        <p class="relative mt-3 text-sm leading-7 text-slate-600">
+          {{ item.description }}
+        </p>
+
+        <ul class="relative mt-5 flex-1 space-y-2.5">
+          <li
+            *ngFor="let point of item.points"
+            class="flex items-center gap-2.5 text-sm text-slate-700"
+          >
+            <span
+              class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-cyan-50 text-cyan-600 ring-1 ring-cyan-100"
+            >
+              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="m5 13 4 4L19 7" />
+              </svg>
+            </span>
+            {{ point }}
+          </li>
+        </ul>
+
+        <!-- Technology tags -->
+        <div
+          class="relative mt-6 flex flex-wrap gap-2 border-t border-slate-100 pt-5"
+        >
+          <span
+            *ngFor="let tag of item.tags"
+            class="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600 transition-colors duration-300 group-hover:bg-cyan-50 group-hover:text-cyan-700"
+          >
+            {{ tag }}
+          </span>
+        </div>
+      </article>
+    </div>
+
+    <!-- How I work -->
+    <div
+      class="relative mt-14 overflow-hidden rounded-3xl bg-slate-950 p-7 text-white shadow-2xl shadow-slate-900/20 sm:p-10"
+      data-aos="fade-up"
+    >
+      <div
+        class="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-cyan-500/20 blur-3xl"
+      ></div>
+      <div
+        class="pointer-events-none absolute -bottom-24 -left-10 h-64 w-64 rounded-full bg-blue-600/20 blur-3xl"
+      ></div>
+
+      <div
+        class="relative flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"
+      >
+        <div>
+          <p
+            class="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-400"
+          >
+            Process
+          </p>
+          <h3 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
+            How I work
+          </h3>
+        </div>
+        <p class="max-w-sm text-sm leading-6 text-slate-400">
+          A simple, transparent workflow that keeps projects on track from
+          idea to launch.
+        </p>
       </div>
-    </article>
+
+      <ol class="relative mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <li
+          *ngFor="let step of process; let i = index; let last = last"
+          class="relative"
+        >
+          <!-- Connector line (desktop) -->
+          <span
+            *ngIf="!last"
+            class="absolute left-12 right-0 top-5 hidden h-px bg-gradient-to-r from-cyan-400/60 to-white/5 lg:block"
+            aria-hidden="true"
+          ></span>
+
+          <span
+            class="relative flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/30 bg-cyan-400/10 font-mono text-sm font-bold text-cyan-300"
+          >
+            0{{ i + 1 }}
+          </span>
+          <p class="mt-4 font-semibold text-white">{{ step.title }}</p>
+          <p class="mt-1 text-sm leading-6 text-slate-400">{{ step.text }}</p>
+        </li>
+      </ol>
+    </div>
   </div>
-</div>
 </section>

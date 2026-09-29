@@ -1,14 +1,44 @@
-<!-- Back-to-top button -->
+<!-- Back-to-top button with scroll progress ring -->
 <button
-  *ngIf="isShow"
   type="button"
   (click)="gotoTop()"
   title="Go to top"
   aria-label="Go to top"
-  class="group fixed bottom-6 right-5 z-50 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-br from-slate-700 to-cyan-700 text-white shadow-xl shadow-cyan-900/20 transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-cyan-200 sm:bottom-8 sm:right-8"
+  [class.pointer-events-none]="!isShow"
+  [class.opacity-0]="!isShow"
+  [class.translate-y-4]="!isShow"
+  class="group fixed bottom-6 right-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-slate-900/90 text-white shadow-xl shadow-cyan-900/30 backdrop-blur transition-all duration-300 hover:-translate-y-1 focus:outline-none focus-visible:ring-4 focus-visible:ring-cyan-300/50 sm:bottom-8 sm:right-8"
 >
   <svg
-    class="h-6 w-6 transition-transform duration-300 group-hover:-translate-y-1"
+    class="absolute inset-0 h-14 w-14 -rotate-90"
+    viewBox="0 0 48 48"
+    aria-hidden="true"
+  >
+    <circle
+      cx="24"
+      cy="24"
+      r="22"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      class="text-white/10"
+    />
+    <circle
+      cx="24"
+      cy="24"
+      r="22"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      class="progress-ring text-cyan-400"
+      [attr.stroke-dasharray]="ringCircumference"
+      [attr.stroke-dashoffset]="ringCircumference * (1 - scrollProgress)"
+    />
+  </svg>
+
+  <svg
+    class="relative h-5 w-5 transition-transform duration-300 group-hover:-translate-y-0.5"
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -17,113 +47,95 @@
     <path
       stroke-linecap="round"
       stroke-linejoin="round"
-      stroke-width="2"
-      d="m6 15 6-6 6 6"
+      stroke-width="2.2"
+      d="M12 19V5m0 0-6 6m6-6 6 6"
     />
   </svg>
 </button>
 
 <!-- Footer -->
-<footer class="relative overflow-hidden bg-slate-950 text-white">
+<footer class="relative mt-20 overflow-hidden bg-slate-950 text-white">
   <!-- Background decorations -->
+  <div class="footer-grid pointer-events-none absolute inset-0"></div>
   <div
-    class="absolute -left-32 top-0 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl"
+    class="pointer-events-none absolute -left-40 -top-20 h-96 w-96 rounded-full bg-cyan-500/10 blur-3xl"
   ></div>
-
   <div
-    class="absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"
+    class="pointer-events-none absolute -bottom-32 -right-40 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl"
   ></div>
 
   <!-- Top gradient line -->
   <div
-    class="h-1 w-full bg-gradient-to-r from-slate-700 via-cyan-500 to-slate-700"
+    class="relative h-px w-full bg-gradient-to-r from-transparent via-cyan-400/70 to-transparent"
   ></div>
 
-  <div class="relative mx-auto max-w-7xl px-5 py-14 sm:px-8 lg:px-12">
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Brand -->
-      <div>
-        <a href="#home" class="inline-flex items-center gap-3">
+  <div class="relative mx-auto max-w-7xl px-5 pb-8 pt-14 sm:px-8 lg:px-12">
+    <!-- CTA card -->
+    <div
+      class="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-900 to-cyan-950/60 p-7 shadow-2xl shadow-black/40 sm:p-10"
+    >
+      <div
+        class="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-cyan-500/20 blur-3xl"
+      ></div>
+
+      <div
+        class="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between"
+      >
+        <div class="max-w-2xl">
           <span
-            class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-slate-600 to-cyan-600 text-sm font-extrabold shadow-lg shadow-cyan-900/30"
+            class="inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300"
           >
-            MA
+            <span class="pulse-dot h-2 w-2 rounded-full bg-emerald-400"></span>
+            Available for new opportunities
           </span>
 
-          <span>
-            <span class="block font-bold tracking-wide text-white">
-              Muhajir Ahmad
-            </span>
-
+          <h2
+            class="mt-4 text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl"
+          >
+            Have a project in mind?
             <span
-              class="block text-[10px] uppercase tracking-[0.2em] text-slate-400"
+              class="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"
             >
-              Software Engineer
+              Let’s build it together.
             </span>
-          </span>
-        </a>
+          </h2>
 
-        <p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">
-          Building modern, responsive, and scalable software applications using
-          Angular, React, TypeScript, and Node.js.
-        </p>
+          <p class="mt-3 text-sm leading-7 text-slate-400 sm:text-base">
+            I’m open to full-time roles and freelance work. Drop me a message
+            and I’ll get back to you as soon as possible.
+          </p>
+        </div>
 
-        <!-- Social links -->
-        <div class="mt-6 flex items-center gap-3">
-          <!-- GitHub -->
+        <div class="flex shrink-0 flex-col gap-3 sm:flex-row">
           <a
-            href="https://github.com/muhajirahmadh99"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub"
-            aria-label="View my GitHub profile"
-            class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:text-cyan-300"
+            href="mailto:muhajirahamed&#64;gmail.com"
+            class="group inline-flex items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-slate-900 shadow-lg transition-all duration-300 hover:-translate-y-0.5 hover:bg-cyan-50"
           >
+            Say hi
             <svg
-              class="h-5 w-5"
-              fill="currentColor"
+              class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
               viewBox="0 0 24 24"
+              stroke="currentColor"
               aria-hidden="true"
             >
               <path
-                d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18A10.9 10.9 0 0 1 12 6.3c.98 0 1.95.13 2.86.38 2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.71 5.38-5.29 5.67.42.36.79 1.07.79 2.16v3.08c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8l4 4m0 0-4 4m4-4H3"
               />
             </svg>
           </a>
 
-          <!-- LinkedIn -->
           <a
-            href="https://www.linkedin.com/in/YOUR-LINK"
+            href="https://wa.me/919626260457?text=Hello%20Muhajir%2C%20I%20would%20like%20to%20connect%20with%20you."
             target="_blank"
             rel="noopener noreferrer"
-            title="LinkedIn"
-            aria-label="View my LinkedIn profile"
-            class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:text-cyan-300"
+            class="inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-[#25D366]/60 hover:bg-[#25D366]/10 hover:text-[#4ade80]"
           >
             <svg
-              class="h-5 w-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                d="M5.34 3.5A2.84 2.84 0 1 1 5.34 9.18a2.84 2.84 0 0 1 0-5.68ZM2.88 10.67H7.8V21H2.88V10.67Zm7.92 0h4.72v1.41h.07c.66-1.24 2.26-2.55 4.65-2.55 4.98 0 5.9 3.28 5.9 7.54V21h-4.92v-3.48c0-.83-.02-1.9-1.16-1.9-1.16 0-1.34.9-1.34 1.84V21H13.8v-10.33Z"
-                transform="translate(-2)"
-              />
-            </svg>
-          </a>
-
-          <!-- WhatsApp -->
-          <a
-            href="https://wa.me/919626260457"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="WhatsApp"
-            aria-label="Contact me on WhatsApp"
-            class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-green-400/50 hover:bg-green-500/10 hover:text-green-400"
-          >
-            <svg
-              class="h-5 w-5"
+              class="h-4 w-4"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -132,22 +144,98 @@
                 d="M12.04 2a9.84 9.84 0 0 0-8.5 14.78L2 22l5.37-1.49A9.98 9.98 0 1 0 12.04 2Zm0 17.98a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.19.89.85-3.11-.2-.32a8.12 8.12 0 1 1 6.97 3.85Zm4.46-6.08c-.24-.12-1.45-.72-1.67-.8-.23-.08-.39-.12-.56.12-.16.25-.63.8-.77.97-.14.16-.29.18-.53.06a6.65 6.65 0 0 1-1.97-1.22 7.43 7.43 0 0 1-1.36-1.69c-.14-.24-.01-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.25-.41.08-.16.04-.3-.02-.43-.06-.12-.55-1.34-.76-1.83-.2-.48-.41-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.24-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.45-.6 1.65-1.17.21-.57.21-1.06.15-1.17-.06-.1-.22-.16-.47-.28Z"
               />
             </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main grid -->
+    <div class="mt-14 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12">
+      <!-- Brand -->
+      <div class="sm:col-span-2 lg:col-span-5">
+        <button
+          type="button"
+          (click)="navigateTo('home')"
+          class="group inline-flex items-center gap-3"
+          aria-label="Go to home section"
+        >
+          <span
+            class="flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-cyan-500 to-cyan-900 text-sm font-extrabold text-white shadow-lg shadow-cyan-900/30 transition-transform duration-300 group-hover:rotate-6"
+          >
+            MA
+          </span>
+          <span class="text-left">
+            <span class="block font-bold tracking-wide text-white">
+              MUHAJIR AHMAD
+            </span>
+            <span
+              class="block text-[10px] uppercase tracking-[0.2em] text-slate-400"
+            >
+              Software Engineer
+            </span>
+          </span>
+        </button>
+
+        <p class="mt-5 max-w-sm text-sm leading-7 text-slate-400">
+          Building modern, responsive, and scalable software applications using
+          Angular, React, TypeScript, and Node.js.
+        </p>
+
+        <!-- Social links -->
+        <div class="mt-6 flex items-center gap-3">
+          <a
+            href="https://github.com/muhajirahmadh99"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            aria-label="View my GitHub profile"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white hover:text-slate-900"
+          >
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 .7a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.37-3.9-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.04 1.77 2.72 1.26 3.38.96.1-.75.4-1.26.74-1.55-2.57-.29-5.27-1.28-5.27-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18A10.9 10.9 0 0 1 12 6.3c.98 0 1.95.13 2.86.38 2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.71 5.38-5.29 5.67.42.36.79 1.07.79 2.16v3.08c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .7Z"
+              />
+            </svg>
           </a>
 
-          <!-- Email -->
+          <a
+            href="https://www.linkedin.com/in/muhajir-ahmad-2aa618207"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn"
+            aria-label="View my LinkedIn profile"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-[#0A66C2] hover:bg-[#0A66C2] hover:text-white"
+          >
+            <svg class="h-[18px] w-[18px]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11.5H3V9.75Zm6.5 0h3.83v1.57h.05c.53-1.01 1.84-2.07 3.79-2.07 4.05 0 4.8 2.67 4.8 6.13v5.87h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.73 0-2 1.35-2 2.75v5.29h-4V9.75Z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://wa.me/919626260457"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="WhatsApp"
+            aria-label="Contact me on WhatsApp"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-[#25D366] hover:bg-[#25D366] hover:text-white"
+          >
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12.04 2a9.84 9.84 0 0 0-8.5 14.78L2 22l5.37-1.49A9.98 9.98 0 1 0 12.04 2Zm0 17.98a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.19.89.85-3.11-.2-.32a8.12 8.12 0 1 1 6.97 3.85Zm4.46-6.08c-.24-.12-1.45-.72-1.67-.8-.23-.08-.39-.12-.56.12-.16.25-.63.8-.77.97-.14.16-.29.18-.53.06a6.65 6.65 0 0 1-1.97-1.22 7.43 7.43 0 0 1-1.36-1.69c-.14-.24-.01-.37.11-.49.11-.11.24-.29.36-.43.12-.14.16-.24.25-.41.08-.16.04-.3-.02-.43-.06-.12-.55-1.34-.76-1.83-.2-.48-.41-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.24-.86.84-.86 2.05s.88 2.38 1 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.45-.6 1.65-1.17.21-.57.21-1.06.15-1.17-.06-.1-.22-.16-.47-.28Z"
+              />
+            </svg>
+          </a>
+
           <a
             href="mailto:muhajirahamed&#64;gmail.com"
             title="Email"
             aria-label="Send me an email"
-            class="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400/50 hover:bg-cyan-500/10 hover:text-cyan-300"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:bg-cyan-500 hover:text-white"
           >
-            <svg
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -159,114 +247,122 @@
         </div>
       </div>
 
-      <!-- Navigation -->
-      <div>
-        <h3 class="text-sm font-bold uppercase tracking-widest text-white">
-          Quick Links
+      <!-- Quick links -->
+      <nav class="lg:col-span-3" aria-label="Footer navigation">
+        <h3
+          class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+        >
+          Navigate
         </h3>
 
-        <ul class="mt-5 space-y-3">
+        <ul class="mt-5 grid grid-cols-2 gap-x-6 gap-y-3">
+          <li *ngFor="let link of quickLinks">
+            <button
+              type="button"
+              (click)="navigateTo(link.id)"
+              class="group inline-flex items-center gap-2 text-sm text-slate-300 transition-colors duration-200 hover:text-cyan-300"
+            >
+              <span
+                class="h-px w-3 bg-slate-600 transition-all duration-300 group-hover:w-5 group-hover:bg-cyan-400"
+              ></span>
+              {{ link.label }}
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact info -->
+      <div class="lg:col-span-4">
+        <h3
+          class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+        >
+          Get in touch
+        </h3>
+
+        <ul class="mt-5 space-y-4">
           <li>
             <a
-              href="#home"
-              class="inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-cyan-300"
+              href="mailto:muhajirahamed&#64;gmail.com"
+              class="group flex items-center gap-3 text-sm text-slate-300 transition-colors hover:text-white"
             >
-              <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
-              Home
+              <span
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-cyan-400 ring-1 ring-white/10 transition-colors group-hover:bg-cyan-500/15"
+              >
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M3 7.5 10.6 13a2.4 2.4 0 0 0 2.8 0L21 7.5M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                  />
+                </svg>
+              </span>
+              <span class="min-w-0 break-all">muhajirahamed&#64;gmail.com</span>
             </a>
           </li>
 
           <li>
             <a
-              href="#about"
-              class="inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-cyan-300"
+              href="tel:+919626260457"
+              class="group flex items-center gap-3 text-sm text-slate-300 transition-colors hover:text-white"
             >
-              <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
-              About
+              <span
+                class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-cyan-400 ring-1 ring-white/10 transition-colors group-hover:bg-cyan-500/15"
+              >
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.8"
+                    d="M2.25 6.75c0 8.28 6.72 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.37c0-.52-.35-.97-.85-1.09l-4.42-1.1c-.44-.12-.9.05-1.17.41l-.97 1.29a1.13 1.13 0 0 1-1.21.38 12.04 12.04 0 0 1-7.14-7.14 1.13 1.13 0 0 1 .38-1.21l1.29-.97c.36-.27.53-.73.41-1.17l-1.1-4.42a1.13 1.13 0 0 0-1.09-.85H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
+                  />
+                </svg>
+              </span>
+              +91 96262 60457
             </a>
           </li>
 
-          <li>
-            <a
-              href="#skills"
-              class="inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-cyan-300"
+          <li class="flex items-center gap-3 text-sm text-slate-300">
+            <span
+              class="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/5 text-cyan-400 ring-1 ring-white/10"
             >
-              <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
-              Skills
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#projects"
-              class="inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-cyan-300"
-            >
-              <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
-              Projects
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="#contact"
-              class="inline-flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-cyan-300"
-            >
-              <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
-              Contact
-            </a>
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M19.5 10.5c0 7.14-7.5 11.25-7.5 11.25S4.5 17.64 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                />
+              </svg>
+            </span>
+            Chennai, Tamil Nadu, India
           </li>
         </ul>
       </div>
-
-      <!-- Contact -->
-      <div>
-        <h3 class="text-sm font-bold uppercase tracking-widest text-white">
-          Let’s Connect
-        </h3>
-
-        <p class="mt-5 text-sm leading-7 text-slate-400">
-          Have a job opportunity or project in mind? Send me a message and I’ll
-          respond as soon as possible.
-        </p>
-
-        <a
-          href="https://wa.me/919626260457?text=Hello%20Muhajir%2C%20I%20would%20like%20to%20connect%20with%20you."
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-5 inline-flex items-center gap-2 rounded-xl bg-[#25D366] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-green-950/30 transition-all duration-300 hover:-translate-y-1 hover:bg-[#1ebe5d]"
-        >
-          Chat on WhatsApp
-
-          <svg
-            class="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M17 8l4 4m0 0-4 4m4-4H3"
-            />
-          </svg>
-        </a>
-      </div>
     </div>
 
-    <!-- Bottom section -->
+    <!-- Bottom bar -->
     <div
-      class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-center sm:flex-row sm:text-left"
+      class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-center text-xs text-slate-500 sm:flex-row sm:text-left sm:text-sm"
     >
-      <p class="text-xs text-slate-500 sm:text-sm">
-        &copy; {{ currentYear }} Muhajir Ahmad. All rights reserved.
-      </p>
+      <p>&copy; {{ currentYear }} Muhajir Ahmad. All rights reserved.</p>
 
-      <p class="text-xs text-slate-500 sm:text-sm">
-        Built with
+      <p class="inline-flex items-center gap-1.5">
+        Crafted with
+        <svg class="h-3.5 w-3.5 text-rose-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.1 0 3.6 1.1 5.3 3 1.7-1.9 3.2-3 5.3-3 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21Z"
+          />
+        </svg>
+        using
         <span class="font-medium text-slate-300">Angular</span>
-        and
+        &amp;
         <span class="font-medium text-slate-300">Tailwind CSS</span>
       </p>
     </div>

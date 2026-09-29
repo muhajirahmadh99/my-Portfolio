@@ -1,31 +1,41 @@
-// scroll to top
-.arrow {
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  transform: translatey(0px);
-  animation: float 2s cubic-bezier(0.39, -0.08, 0.58, 1) infinite;
+:host {
+  display: block;
+}
 
-  @keyframes float {
-    0% {
-      transform: translatey(0px);
-    }
+// Soft pulse for the "available for work" dot
+.pulse-dot {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
-    50% {
-      transform: translatey(-20px);
-    }
-
-    100% {
-      transform: translatey(0px);
-    }
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(52, 211, 153, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0);
   }
 }
-a {
-  color: rgb(243 244 246);
+
+// Subtle dotted grid behind the footer
+.footer-grid {
+  background-image: radial-gradient(
+    rgba(148, 163, 184, 0.12) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 85%);
 }
-a:hover {
-  color: rgb(239 68 68);
+
+.progress-ring {
+  transition: stroke-dashoffset 0.15s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot {
+    animation: none;
+  }
 }

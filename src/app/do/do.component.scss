@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+// Cursor-following glow on the expertise cards
+.spotlight {
+  --x: 50%;
+  --y: 0%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      420px circle at var(--x) var(--y),
+      rgba(6, 182, 212, 0.12),
+      transparent 45%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}

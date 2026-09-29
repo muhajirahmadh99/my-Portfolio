@@ -1,99 +1,214 @@
 <section
   id="about"
-  class="relative overflow-hidden  px-5 py-20 pt-0 sm:px-8 lg:px-12"
+  class="relative overflow-hidden px-5 pb-20 pt-0 sm:px-8 lg:px-12"
 >
   <!-- Background decoration -->
   <div
-    class="absolute -left-32 top-32 h-80 w-80 rounded-full bg-blue-300/20 blur-3xl"
+    class="pointer-events-none absolute -left-32 top-32 h-80 w-80 rounded-full bg-cyan-300/20 blur-3xl"
   ></div>
-
   <div
-    class="absolute -right-32 bottom-20 h-80 w-80 rounded-full bg-purple-300/20 blur-3xl"
+    class="pointer-events-none absolute -right-32 bottom-20 h-96 w-96 rounded-full bg-blue-300/20 blur-3xl"
   ></div>
 
-  <div class="relative mx-auto max-w-6xl">
+  <div class="relative mx-auto max-w-7xl">
     <!-- Heading -->
-    <div class="mb-16 text-center">
+    <div class="mb-14 text-center lg:mb-20">
       <span
-        class="inline-block rounded-full bg-blue-50 px-4 py-2 text-xs font-bold uppercase tracking-[0.25em] text-slate-600"
+        class="inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.25em] text-cyan-700"
       >
+        <span class="h-1.5 w-1.5 rounded-full bg-cyan-500"></span>
         About Me
       </span>
 
-      <h2 class="mt-4 text-3xl font-extrabold text-slate-900 sm:text-4xl">
-        Professional Journey
+      <h2
+        class="mt-5 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl"
+      >
+        My professional
+        <span
+          class="bg-gradient-to-r from-cyan-600 to-blue-700 bg-clip-text text-transparent"
+        >
+          journey
+        </span>
       </h2>
 
-      <p class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
-        My experience as a Software Engineer, building responsive,
-        user-friendly, and scalable applications using modern technologies.
+      <p
+        class="mx-auto mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base"
+      >
+        Building responsive, user-friendly, and scalable applications with
+        modern frontend technologies.
       </p>
-
-      <div
-        class="mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-slate-500 to-cyan-500"
-      ></div>
     </div>
 
-    <!-- Timeline -->
-    <div class="relative">
-      <!-- Timeline line -->
-      <div
-        class="absolute bottom-0 left-5 top-0 w-1 -translate-x-1/2 rounded-full bg-gradient-to-b from-slate-500 via-slate-500 to-slate-300 md:left-1/2"
-      ></div>
-
-      <!-- Timeline items -->
-      <div
-        *ngFor="let item of projects; let i = index"
-        class="relative mb-12 grid grid-cols-1 md:grid-cols-2 md:gap-20"
-        [attr.data-aos]="
-          isMobile ? 'fade-up' : i % 2 === 0 ? 'fade-left' : 'fade-right'
-        "
-      >
-        <!-- Timeline number -->
-        <div
-          class="absolute left-5 top-7 z-20 flex h-11 w-11 -translate-x-1/2 items-center justify-center rounded-full border-4 border-white bg-gradient-to-br from-slate-600 to-slate-600 text-sm font-bold text-white shadow-lg shadow-blue-500/30 md:left-1/2"
-        >
-          {{ i + 1 }}
-        </div>
-
-        <!-- Experience card -->
-        <article
-          class="group relative ml-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-500 hover:-translate-y-2 hover:border-blue-200 hover:shadow-2xl md:ml-0"
-          [ngClass]="{
-            'md:col-start-2': i % 2 === 0,
-            'md:col-start-1 md:row-start-1': i % 2 !== 0
-          }"
-        >
-          <!-- Top accent -->
+    <div class="grid gap-12 lg:grid-cols-12 lg:gap-14">
+      <!-- Intro card -->
+      <aside class="lg:col-span-5" data-aos="fade-up">
+        <div class="lg:sticky lg:top-32">
           <div
-            class="h-1.5 w-full bg-gradient-to-r from-slate-600 via-slate-500 to-cyan-500"
-          ></div>
+            class="relative overflow-hidden rounded-3xl bg-slate-950 p-7 text-white shadow-2xl shadow-slate-900/20 sm:p-9"
+          >
+            <div
+              class="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-cyan-500/25 blur-3xl"
+            ></div>
+            <div
+              class="pointer-events-none absolute -bottom-24 -left-16 h-60 w-60 rounded-full bg-blue-600/20 blur-3xl"
+            ></div>
 
-          <div class="p-5 sm:p-7">
-            <!-- Company details -->
-            <div class="flex items-start gap-4">
-              <div
-                class="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 p-2 shadow-sm"
-              >
+            <div class="relative">
+              <div class="flex items-center gap-4">
                 <img
-                  [src]="item.img"
-                  [attr.alt]="item.office + ' logo'"
-                  class="h-full w-full object-contain"
+                  src="assets/images/dp.jpg"
+                  alt="Muhajir Ahmad"
+                  class="h-16 w-16 rounded-2xl border-2 border-white/20 object-cover object-top"
                 />
+                <div>
+                  <p class="text-lg font-bold">Muhajir Ahmad</p>
+                  <p class="text-sm text-slate-400">
+                    Software Engineer · Chennai, India
+                  </p>
+                </div>
               </div>
 
-              <div class="min-w-0 flex-1">
-                <h3
-                  class="text-lg font-bold text-slate-900 transition-colors duration-300 group-hover:text-slate-900"
+              <p class="mt-6 text-sm leading-7 text-slate-300 sm:text-base">
+                I’m a frontend-focused software engineer who loves turning
+                complex requirements into clean, fast, and intuitive
+                interfaces. I’ve worked across
+                <span class="font-semibold text-white">Angular</span> and
+                <span class="font-semibold text-white">React</span> codebases,
+                integrating REST APIs and collaborating closely with designers
+                and backend teams in Agile environments.
+              </p>
+
+              <!-- Highlights -->
+              <dl class="mt-8 grid grid-cols-2 gap-3">
+                <div
+                  *ngFor="let h of highlights"
+                  class="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur"
                 >
-                  {{ item.office }}
-                </h3>
+                  <dd
+                    class="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-2xl font-extrabold text-transparent sm:text-3xl"
+                  >
+                    {{ h.value }}
+                  </dd>
+                  <dt class="mt-1 text-xs font-medium text-slate-400">
+                    {{ h.label }}
+                  </dt>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Experience timeline -->
+      <div class="lg:col-span-7">
+        <h3
+          class="mb-8 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-slate-500"
+        >
+          Work experience
+          <span class="h-px flex-1 bg-slate-200"></span>
+        </h3>
+
+        <ol class="relative space-y-8">
+          <!-- Vertical line -->
+          <span
+            class="absolute bottom-4 left-[19px] top-4 w-px bg-gradient-to-b from-cyan-400 via-slate-300 to-transparent"
+            aria-hidden="true"
+          ></span>
+
+          <li
+            *ngFor="let item of experiences"
+            class="relative pl-14"
+            data-aos="fade-up"
+          >
+            <!-- Timeline dot -->
+            <span
+              class="absolute left-0 top-6 flex h-10 w-10 items-center justify-center rounded-full border-4 border-white shadow-md"
+              [ngClass]="
+                item.current
+                  ? 'bg-gradient-to-br from-cyan-500 to-blue-700'
+                  : 'bg-slate-300'
+              "
+              aria-hidden="true"
+            >
+              <span
+                class="h-2.5 w-2.5 rounded-full bg-white"
+                [class.pulse-dot]="item.current"
+              ></span>
+            </span>
+
+            <!-- Card -->
+            <article
+              class="group rounded-2xl border bg-white/90 p-5 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-7"
+              [ngClass]="
+                item.current
+                  ? 'border-cyan-200 shadow-cyan-100 hover:shadow-cyan-100'
+                  : 'border-slate-200 hover:border-slate-300'
+              "
+            >
+              <div
+                class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-1.5 shadow-sm"
+                  >
+                    <img
+                      [src]="item.img"
+                      [attr.alt]="item.office + ' logo'"
+                      class="h-full w-full object-contain"
+                    />
+                  </div>
+
+                  <div class="min-w-0">
+                    <h4 class="text-lg font-bold text-slate-900">
+                      {{ item.role }}
+                    </h4>
+                    <p class="text-sm font-medium text-cyan-700">
+                      {{ item.office }}
+                    </p>
+                  </div>
+                </div>
 
                 <div
-                  class="mt-1 inline-flex items-center gap-1.5 text-sm text-slate-500"
+                  class="flex shrink-0 flex-wrap items-center gap-2 sm:flex-col sm:items-end"
+                >
+                  <span
+                    *ngIf="item.current"
+                    class="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-200"
+                  >
+                    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                    Current
+                  </span>
+                  <span
+                    class="inline-flex items-center gap-1.5 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-600"
+                  >
+                    <svg
+                      class="h-3.5 w-3.5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7V3m8 4V3M5 11h14M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                      />
+                    </svg>
+                    {{ item.exp }}
+                  </span>
+                </div>
+              </div>
+
+              <!-- Highlights -->
+              <ul class="mt-5 space-y-2.5">
+                <li
+                  *ngFor="let point of item.highlights"
+                  class="flex gap-3 text-sm leading-6 text-slate-600"
                 >
                   <svg
-                    class="h-4 w-4 text-slate-500"
+                    class="mt-0.5 h-5 w-5 shrink-0 text-cyan-500"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -103,94 +218,33 @@
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       stroke-width="2"
-                      d="M8 7V3m8 4V3M5 11h14M5 5h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z"
+                      d="m9 12.75 2.25 2.25L15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                     />
                   </svg>
+                  <span>{{ point }}</span>
+                </li>
+              </ul>
 
-                  {{ item.exp }}
-                </div>
-              </div>
-            </div>
-
-            <!-- Role -->
-            <div
-              class="mt-5 inline-flex items-center rounded-lg bg-blue-50 px-3 py-1.5 text-sm font-semibold text-slate-700"
-            >
-              {{ item.role }}
-            </div>
-
-            <!-- Description -->
-            <div
-              class="mt-5 border-l-2 border-slate-200 pl-4 text-sm leading-7 text-slate-600"
-              [innerHTML]="item.description"
-            ></div>
-
-            <!-- Technologies -->
-            <div class="mt-6 flex flex-wrap gap-2">
+              <!-- Tech -->
               <div
-                *ngIf="item.roleTitle1"
-                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+                class="mt-6 flex flex-wrap gap-2 border-t border-slate-100 pt-5"
               >
-                <img
-                  *ngIf="item.roleimg1"
-                  [src]="item.roleimg1"
-                  [attr.alt]="item.roleTitle1"
-                  class="h-5 w-5 object-contain"
-                />
-
-                {{ item.roleTitle1 }}
+                <span
+                  *ngFor="let t of item.tech"
+                  class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700 transition-colors hover:border-cyan-200 hover:bg-cyan-50"
+                >
+                  <img
+                    [src]="t.img"
+                    alt=""
+                    class="h-4 w-4 object-contain"
+                  />
+                  {{ t.name }}
+                </span>
               </div>
-
-              <div
-                *ngIf="item.roleTitle2"
-                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                <img
-                  *ngIf="item.roleimg2"
-                  [src]="item.roleimg2"
-                  [attr.alt]="item.roleTitle2"
-                  class="h-5 w-5 object-contain"
-                />
-
-                {{ item.roleTitle2 }}
-              </div>
-
-              <div
-                *ngIf="item.roleTitle3"
-                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                <img
-                  *ngIf="item.roleimg3"
-                  [src]="item.roleimg3"
-                  [attr.alt]="item.roleTitle3"
-                  class="h-5 w-5 object-contain"
-                />
-
-                {{ item.roleTitle3 }}
-              </div>
-
-              <div
-                *ngIf="item.roleTitle4"
-                class="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                <img
-                  *ngIf="item.roleimg4"
-                  [src]="item.roleimg4"
-                  [attr.alt]="item.roleTitle4"
-                  class="h-5 w-5 object-contain"
-                />
-
-                {{ item.roleTitle4 }}
-              </div>
-            </div>
-          </div>
-        </article>
+            </article>
+          </li>
+        </ol>
       </div>
-
-      <!-- Timeline end -->
-      <div
-        class="relative z-20 mx-auto flex h-5 w-5 rounded-full border-4 border-white bg-slate-400 shadow-md max-md:ml-[10px]"
-      ></div>
     </div>
   </div>
 </section>
